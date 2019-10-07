@@ -1,0 +1,13 @@
+pizza dough : 1
+pizza dough flattened : 1
+pizza dough sauced : 1
+pizza dough cheesed uncooked : 1
+pizza dough meat toppings uncooked : 1
+pizza dough veggie toppings uncooked : 1
+pizza dough meat toppings cooked : 4
+pizza dough veggie toppings cooked : 4
+
+
+
+
+
