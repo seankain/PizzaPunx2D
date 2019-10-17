@@ -5,15 +5,14 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField]
-    private float maxSpeed = 0.2f;
+    private float maxSpeed = 1f;
     [SerializeField]
     private float acceleration = 0.01f;
     private float elapsed = 0;
-    [SerializeField]
-    private float inputRateHz = 5;
     private Animator anim;
     private float speed = 0;
     private Vector2 direction = Vector2.zero;
+    private KeyCode currentKey = KeyCode.None;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +23,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool moveKeyDown = false;
+        var moveKeyDown = false;
         if (Input.GetKey(KeyCode.UpArrow))
         {
             anim.SetInteger("Direction", 2);
@@ -55,21 +54,20 @@ public class Player : MonoBehaviour
         }
         if (moveKeyDown)
         {
-            //if (speed < maxSpeed)
-            //{
-            //    speed += acceleration;
-            //}
-            speed = 0.1f;
+            if (speed < maxSpeed)
+            {
+                speed += acceleration;
+            }
         }
         else
         {
-            //if (speed > 0)
-            //{
-            //    speed -= acceleration;
-            //}
-            speed = 0;
+            if (speed > 0)
+            {
+                speed -= acceleration;
+            }
         }
+        anim.SetBool("MoveKeyDown", moveKeyDown);
         anim.SetFloat("Speed", speed);
-        this.transform.position += new Vector3(direction.x * speed, direction.y * speed, 0);
+        this.transform.position += new Vector3(direction.x * speed * Time.deltaTime, direction.y * speed * Time.deltaTime, 0);
     }
 }
