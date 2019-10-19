@@ -20,34 +20,48 @@ public class Player : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+    private void ProcessKeyDown(KeyCode keyCode, int direction) {
+        if (keyCode != currentKey) {
+            currentKey = keyCode;
+            anim.SetInteger("Direction", direction);
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
         var moveKeyDown = false;
+        
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            anim.SetInteger("Direction", 2);
+            ProcessKeyDown(KeyCode.UpArrow, 2);
+            //anim.SetInteger("Direction", 2);
             direction.x = 0;
             direction.y = 1;
             moveKeyDown = true;
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            anim.SetInteger("Direction", 1);
+            ProcessKeyDown(KeyCode.RightArrow, 1);
+            //anim.SetInteger("Direction", 1);
             direction.x = 1;
             direction.y = 0;
             moveKeyDown = true;
+            
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            anim.SetInteger("Direction", 3);
+            ProcessKeyDown(KeyCode.LeftArrow, 3);
+            //anim.SetInteger("Direction", 3);
             direction.x = -1;
             direction.y = 0;
             moveKeyDown = true;
+            
         }
-        if (Input.GetKey(KeyCode.DownArrow))
+        if ( Input.GetKey(KeyCode.DownArrow))
         {
-            anim.SetInteger("Direction", 0);
+            ProcessKeyDown(KeyCode.DownArrow, 0);
+            //anim.SetInteger("Direction", 0);
             direction.x = 0;
             direction.y = -1;
             moveKeyDown = true;
@@ -65,7 +79,9 @@ public class Player : MonoBehaviour
             {
                 speed -= acceleration;
             }
+            currentKey = KeyCode.None;
         }
+
         anim.SetBool("MoveKeyDown", moveKeyDown);
         anim.SetFloat("Speed", speed);
         this.transform.position += new Vector3(direction.x * speed * Time.deltaTime, direction.y * speed * Time.deltaTime, 0);
