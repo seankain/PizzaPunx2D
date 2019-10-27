@@ -16,7 +16,7 @@ TagManager:
   - Floor
   - Countertops
   - Player
-  - 
+  - Walls
   - 
   - 
   - 
@@ -43,6 +43,9 @@ TagManager:
     locked: 0
   - name: Floor
     uniqueID: 3769101225
+    locked: 0
+  - name: Walls
+    uniqueID: 1015470003
     locked: 0
   - name: Countertops
     uniqueID: 234437263
