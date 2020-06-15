@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public float targetSpeed = 0.05f;
     [SerializeField]
     private float maxSpeed = 0.2f;
     [SerializeField]
@@ -25,41 +26,41 @@ public class Player : MonoBehaviour
     void Update()
     {
         bool moveKeyDown = false;
+        direction.x = 0;
+        direction.y = 0;
+
         if (Input.GetKey(KeyCode.UpArrow))
         {
             anim.SetInteger("Direction", 2);
-            direction.x = 0;
-            direction.y = 1;
+            direction.y += 1;
             moveKeyDown = true;
         }
         if (Input.GetKey(KeyCode.RightArrow))
         {
             anim.SetInteger("Direction", 1);
-            direction.x = 1;
-            direction.y = 0;
+            direction.x += 1;
             moveKeyDown = true;
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             anim.SetInteger("Direction", 3);
-            direction.x = -1;
-            direction.y = 0;
+            direction.x -= 1;
             moveKeyDown = true;
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
             anim.SetInteger("Direction", 0);
-            direction.x = 0;
-            direction.y = -1;
+            direction.y -= 1;
             moveKeyDown = true;
         }
+
         if (moveKeyDown)
         {
             //if (speed < maxSpeed)
             //{
             //    speed += acceleration;
             //}
-            speed = 0.1f;
+            speed = targetSpeed;
         }
         else
         {
