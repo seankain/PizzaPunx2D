@@ -51,6 +51,9 @@ TagManager:
   - name: Countertops
     uniqueID: 234437263
     locked: 0
+  - name: CountertopContents
+    uniqueID: 1713583049
+    locked: 0
   - name: Player
     uniqueID: 1546015155
     locked: 0
