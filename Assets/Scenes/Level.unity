@@ -1300,6 +1300,7 @@ MonoBehaviour:
   acceleration: 0.001
   inputRateHz: 5
   interactDistance: 0.4
+  holdLocation: {fileID: 1801015106}
 --- !u!61 &641269655
 BoxCollider2D:
   m_ObjectHideFlags: 0

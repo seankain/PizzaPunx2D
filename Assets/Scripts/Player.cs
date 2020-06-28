@@ -18,7 +18,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     private float interactDistance = 0.4f;
     private bool interacting = false;
-    private GameObject currentHolding;
+    private Holdable currentHolding;
+    [SerializeField]
+    private Transform holdLocation;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +32,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         bool moveKeyDown = false;
-        interacting = Input.GetKey(KeyCode.Space);
+        interacting = Input.GetKeyDown(KeyCode.Space);
         direction.x = 0;
         direction.y = 0;
 
@@ -78,6 +80,10 @@ public class Player : MonoBehaviour
         anim.SetFloat("Speed", speed);
         this.transform.position += new Vector3(direction.x * speed, direction.y * speed, 0);
         if (interacting) { TestInteract(); }
+        if(currentHolding != null)
+        {
+            currentHolding.transform.position = holdLocation.position; 
+        }
     }
 
     private void TestInteract()
@@ -85,12 +91,22 @@ public class Player : MonoBehaviour
         if (currentHolding != null)
         {
             //interactable that is holdable is released
+            currentHolding = null;
+            return;
         }
         var interactables = FindObjectsOfType<Interactable>();
         foreach (var interactable in interactables)
         {
             if(Vector3.Distance(interactable.transform.position,gameObject.transform.position) < 1f)
             {
+                //Can it be held?
+                var holdable = interactable.gameObject.GetComponent<Holdable>();
+                if (holdable != null)
+                {
+                    currentHolding = holdable;
+                }
+                //Todo otherwise interact
+                
                 Debug.Log(interactable.name);
             }
         }
