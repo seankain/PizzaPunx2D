@@ -15,6 +15,10 @@ public class Player : MonoBehaviour
     private Animator anim;
     private float speed = 0;
     private Vector2 direction = Vector2.zero;
+    [SerializeField]
+    private float interactDistance = 0.4f;
+    private bool interacting = false;
+    private GameObject currentHolding;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +30,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         bool moveKeyDown = false;
+        interacting = Input.GetKey(KeyCode.Space);
         direction.x = 0;
         direction.y = 0;
 
@@ -72,5 +77,22 @@ public class Player : MonoBehaviour
         }
         anim.SetFloat("Speed", speed);
         this.transform.position += new Vector3(direction.x * speed, direction.y * speed, 0);
+        if (interacting) { TestInteract(); }
+    }
+
+    private void TestInteract()
+    {
+        if (currentHolding != null)
+        {
+            //interactable that is holdable is released
+        }
+        var interactables = FindObjectsOfType<Interactable>();
+        foreach (var interactable in interactables)
+        {
+            if(Vector3.Distance(interactable.transform.position,gameObject.transform.position) < 1f)
+            {
+                Debug.Log(interactable.name);
+            }
+        }
     }
 }

@@ -29,7 +29,7 @@ public class CursorController : MonoBehaviour
         {
             if (rayTest.CursorOverReview()) { return; }
             var pos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            player.GoTo(new Vector3(pos.x,pos.y,0));
+            //player.GoTo(new Vector3(pos.x,pos.y,0));
             
         }
 
