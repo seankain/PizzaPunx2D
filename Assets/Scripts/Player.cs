@@ -82,7 +82,10 @@ public class Player : MonoBehaviour
         if (interacting) { TestInteract(); }
         if(currentHolding != null)
         {
-            currentHolding.transform.position = holdLocation.position; 
+            var holdPosition = holdLocation.position;
+            holdPosition.x += direction.x * 0.2f;
+            holdPosition.y += direction.y * 0.2f;
+            currentHolding.transform.position = holdPosition; 
         }
     }
 
@@ -97,7 +100,7 @@ public class Player : MonoBehaviour
         var interactables = FindObjectsOfType<Interactable>();
         foreach (var interactable in interactables)
         {
-            if(Vector3.Distance(interactable.transform.position,gameObject.transform.position) < 1f)
+            if(Vector3.Distance(interactable.transform.position,gameObject.transform.position) < interactDistance)
             {
                 //Can it be held?
                 var holdable = interactable.gameObject.GetComponent<Holdable>();
@@ -106,8 +109,6 @@ public class Player : MonoBehaviour
                     currentHolding = holdable;
                 }
                 //Todo otherwise interact
-                
-                Debug.Log(interactable.name);
             }
         }
     }
