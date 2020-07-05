@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Review
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - Floor
   - Countertops
   - Player
-  - 
+  - Walls
   - 
   - 
   - 
@@ -44,12 +45,21 @@ TagManager:
   - name: Floor
     uniqueID: 3769101225
     locked: 0
+  - name: Walls
+    uniqueID: 1015470003
+    locked: 0
+  - name: Player
+    uniqueID: 1546015155
+    locked: 0
   - name: Countertops
     uniqueID: 234437263
     locked: 0
   - name: CountertopContents
     uniqueID: 1713583049
     locked: 0
-  - name: Player
-    uniqueID: 1546015155
+  - name: HeldItems
+    uniqueID: 4226957295
+    locked: 0
+  - name: UI
+    uniqueID: 14381027
     locked: 0
