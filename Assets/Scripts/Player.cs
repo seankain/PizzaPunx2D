@@ -22,9 +22,16 @@ public class Player : MonoBehaviour
     [SerializeField]
     private Transform holdLocation;
 
+    public PlacementSocket[] placesToPutThings;
+
     // Start is called before the first frame update
     void Start()
     {
+        placesToPutThings = FindObjectsOfType<PlacementSocket>();
+        if (placesToPutThings == null || placesToPutThings.Length == 0)
+        {
+            Debug.LogError("There's no place to put anything");
+        }
         anim = GetComponent<Animator>();
     }
 
@@ -94,6 +101,7 @@ public class Player : MonoBehaviour
         if (currentHolding != null)
         {
             //interactable that is holdable is released
+            currentHolding.Drop(placesToPutThings);
             currentHolding = null;
             return;
         }
@@ -107,7 +115,9 @@ public class Player : MonoBehaviour
                 if (holdable != null)
                 {
                     currentHolding = holdable;
+                    currentHolding.Pickup();
                 }
+
                 //Todo otherwise interact
             }
         }
