@@ -1,0 +1,1315 @@
+fileFormatVersion: 2
+guid: 8c9feb66ec3163044ace960b0b2ba7eb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8559833838126978657
+    second: pizza_guy_blonde_0
+  - first:
+      213: -549238694182217024
+    second: idle_left
+  - first:
+      213: -8371289194908934523
+    second: pizza_guy_blonde_2
+  - first:
+      213: 3237519236876210061
+    second: pizza_guy_blonde_3
+  - first:
+      213: -5412361929755375547
+    second: pizza_guy_blonde_4
+  - first:
+      213: -7682361168483084588
+    second: pizza_guy_blonde_5
+  - first:
+      213: -4860752671551405711
+    second: pizza_guy_blonde_6
+  - first:
+      213: 4503947778781180566
+    second: pizza_guy_blonde_7
+  - first:
+      213: 5724790667357258772
+    second: pizza_guy_blonde_8
+  - first:
+      213: -997386876024172980
+    second: pizza_guy_blonde_9
+  - first:
+      213: -6020281915227014148
+    second: pizza_guy_blonde_10
+  - first:
+      213: 3260133478373762
+    second: pizza_guy_blonde_11
+  - first:
+      213: 8448396652957958299
+    second: pizza_guy_blonde_12
+  - first:
+      213: 79467396070952805
+    second: pizza_guy_blonde_13
+  - first:
+      213: 3013460618092336490
+    second: pizza_guy_blonde_14
+  - first:
+      213: 8526332455529575741
+    second: pizza_guy_blonde_15
+  - first:
+      213: 5181314835904859232
+    second: pizza_guy_blonde_16
+  - first:
+      213: -8734774173592712788
+    second: pizza_guy_blonde_17
+  - first:
+      213: 913724586953406625
+    second: pizza_guy_blonde_18
+  - first:
+      213: 2966025265025905264
+    second: pizza_guy_blonde_19
+  - first:
+      213: -5650108802420976317
+    second: pizza_guy_blonde_20
+  - first:
+      213: 8642641804352022186
+    second: pizza_guy_blonde_21
+  - first:
+      213: -3814117580718380173
+    second: pizza_guy_blonde_22
+  - first:
+      213: 4099667735083467892
+    second: pizza_guy_blonde_23
+  - first:
+      213: 479816905522229878
+    second: pizza_guy_blonde_24
+  - first:
+      213: 8631152292572718011
+    second: pizza_guy_blonde_25
+  - first:
+      213: -9100477771933977504
+    second: pizza_guy_blonde_26
+  - first:
+      213: 2238694544849907358
+    second: pizza_guy_blonde_27
+  - first:
+      213: -680295481083583641
+    second: pizza_guy_blonde_28
+  - first:
+      213: 3490466406567219870
+    second: pizza_guy_blonde_29
+  - first:
+      213: 2435245455540721227
+    second: pizza_guy_blonde_30
+  - first:
+      213: -6434165037384447648
+    second: pizza_guy_blonde_31
+  - first:
+      213: -1207983092574330759
+    second: pizza_guy_blonde_32
+  - first:
+      213: -1512445111661192309
+    second: pizza_guy_blonde_33
+  - first:
+      213: 5564577809367071160
+    second: pizza_guy_blonde_34
+  - first:
+      213: -344495889565837134
+    second: pizza_guy_blonde_35
+  - first:
+      213: -5297012443869507018
+    second: pizza_guy_blonde_36
+  - first:
+      213: 1735258100068722671
+    second: pizza_guy_blonde_37
+  - first:
+      213: 8895929452673259137
+    second: pizza_guy_blonde_38
+  - first:
+      213: 4480176351126455913
+    second: pizza_guy_blonde_39
+  - first:
+      213: -5847988183496419312
+    second: pizza_guy_blonde_40
+  - first:
+      213: 4999087944705902350
+    second: pizza_guy_blonde_41
+  - first:
+      213: -1957255547184963146
+    second: pizza_guy_blonde_42
+  - first:
+      213: -1958923713375542546
+    second: pizza_guy_blonde_43
+  - first:
+      213: 4825126239025704661
+    second: pizza_guy_blonde_44
+  - first:
+      213: 3377804816682364878
+    second: pizza_guy_blonde_45
+  - first:
+      213: -696027713815218766
+    second: pizza_guy_blonde_46
+  - first:
+      213: -4111527502911774213
+    second: pizza_guy_blonde_47
+  - first:
+      213: 8215484714725542913
+    second: pizza_guy_blonde_48
+  - first:
+      213: -7257933316269231746
+    second: pizza_guy_blonde_49
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pizza_guy_blonde_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 388
+        width: 27
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65601de6fe264804695ff80189647425
+      internalID: 8559833838126978657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idle_left
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 388
+        width: 27
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2b6929fc477ec74bb5dd9d3553ffa55
+      internalID: -549238694182217024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_2
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 388
+        width: 27
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4148fa465495874894ba9d64ed7b814
+      internalID: -8371289194908934523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_3
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 388
+        width: 27
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 324d82460890c3e45b918b7262112453
+      internalID: 3237519236876210061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_4
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 388
+        width: 37
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc86fa8aa61732745acc3cda27f5b8d0
+      internalID: -5412361929755375547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_5
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 388
+        width: 33
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9447d740034998f4f924ab915643c86c
+      internalID: -7682361168483084588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_6
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 388
+        width: 27
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e10bbfca31bcd2b479362e06e7fc3748
+      internalID: -4860752671551405711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_7
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 388
+        width: 24
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fef8c65a3c87174fa4394df79dad46e
+      internalID: 4503947778781180566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_8
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 319
+        width: 27
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a55ff38e509ae7b40a06708f2f04eaf0
+      internalID: 5724790667357258772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_9
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 319
+        width: 23
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf2dd85fbc2d768468dd2d30e953a599
+      internalID: -997386876024172980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_10
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 319
+        width: 23
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af14d7168014e046b9b030ebcfd9b99
+      internalID: -6020281915227014148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_11
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 319
+        width: 23
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aa42a76826e781499581616b77e6a5a
+      internalID: 3260133478373762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_12
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 319
+        width: 27
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 561d22afe61a9694a9ec09010f75b6fb
+      internalID: 8448396652957958299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_13
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 319
+        width: 22
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f252ee63d8695be499d01c6a62614f31
+      internalID: 79467396070952805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_14
+      rect:
+        serializedVersion: 2
+        x: 407
+        y: 319
+        width: 22
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52d07718460c8704a8d6d930c54e8e06
+      internalID: 3013460618092336490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_15
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 319
+        width: 27
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad1c70078d37fa34b9d5f64b4992c108
+      internalID: 8526332455529575741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_16
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 258
+        width: 23
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a7d2156f06d13b479f01966b49ac819
+      internalID: 5181314835904859232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_17
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 258
+        width: 22
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9ca15594ffa5c740982a6cbc23e44c9
+      internalID: -8734774173592712788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_18
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 258
+        width: 22
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8149bb2d6cdb84443b043ea7654f0e57
+      internalID: 913724586953406625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_19
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 258
+        width: 22
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 845938a7c3e32004baecf446ee9a9d14
+      internalID: 2966025265025905264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_20
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 258
+        width: 26
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd732f3d6a106e548abc6d23d3ed1c6a
+      internalID: -5650108802420976317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_21
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 258
+        width: 22
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb002dcaa1068b64b96a37d2b632eaac
+      internalID: 8642641804352022186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_22
+      rect:
+        serializedVersion: 2
+        x: 408
+        y: 258
+        width: 22
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb073e41c74af0a4582448fabf2ba3b4
+      internalID: -3814117580718380173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_23
+      rect:
+        serializedVersion: 2
+        x: 472
+        y: 258
+        width: 22
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d7efe36541dc640bf1278850b979fd
+      internalID: 4099667735083467892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_24
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 193
+        width: 23
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cffb17cf50a68ea47889ea6ce28da44a
+      internalID: 479816905522229878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_25
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 192
+        width: 29
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21bb322750692f0439c11e3db81337ae
+      internalID: 8631152292572718011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_26
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 192
+        width: 29
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f548a3ce0297ce47b57315dedf30859
+      internalID: -9100477771933977504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_27
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 192
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05bd530cb85f5f9408a636beb9612a36
+      internalID: 2238694544849907358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_28
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 193
+        width: 30
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28a18bfbcce64b24ab8a936324f986e0
+      internalID: -680295481083583641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_29
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 193
+        width: 27
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcbb56bf4d845574bbda4b6b292b634c
+      internalID: 3490466406567219870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_30
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 192
+        width: 29
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47ae6e1019274494884853392f881d96
+      internalID: 2435245455540721227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_31
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 193
+        width: 23
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a7a47ecd120c2740a630f4abd7f3ea7
+      internalID: -6434165037384447648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_32
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 128
+        width: 24
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 854422933e2025b44a666b8169ece01a
+      internalID: -1207983092574330759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_33
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 128
+        width: 32
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c69d16a83b8cc934f8c657a91164fcbc
+      internalID: -1512445111661192309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_34
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 128
+        width: 36
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 518787dcc81515b43a81816cdad50b2a
+      internalID: 5564577809367071160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_35
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 128
+        width: 28
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea9e514cf1155f40ae7e2ca0ef4d809
+      internalID: -344495889565837134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_36
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 128
+        width: 28
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a078e4a3f6816054da15a41862b75bb0
+      internalID: -5297012443869507018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_37
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 64
+        width: 23
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c879090d2cbed246ba13582e4c3ce73
+      internalID: 1735258100068722671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_38
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 63
+        width: 29
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2cc36904bf2432409088f5d86ed2df0
+      internalID: 8895929452673259137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_39
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 63
+        width: 29
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a161742544997541b1fd74457dff6fc
+      internalID: 4480176351126455913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_40
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 63
+        width: 30
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e3410cd781d46f44bc747f59068acfd
+      internalID: -5847988183496419312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_41
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 64
+        width: 30
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddf65793238693d4bab911268ca92491
+      internalID: 4999087944705902350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_42
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 64
+        width: 27
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa222eaa8454004ab9a8d7eed523260
+      internalID: -1957255547184963146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_43
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 63
+        width: 29
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe80acc0993e34f44b9c8d14d7a8eb35
+      internalID: -1958923713375542546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_44
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 64
+        width: 23
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebc33fe0938670741902133f9b61a630
+      internalID: 4825126239025704661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_45
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 0
+        width: 24
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b93eeaaa200fb604ab52f841d774e352
+      internalID: 3377804816682364878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_46
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 32
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e7ee3fea3b33c241b3b333785a81b2d
+      internalID: -696027713815218766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_47
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 0
+        width: 36
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db045f31868e8134a9afa3526e02cdae
+      internalID: -4111527502911774213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_48
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 0
+        width: 28
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3758de39b78483d4a8cc6d183e782f8c
+      internalID: 8215484714725542913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pizza_guy_blonde_49
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 0
+        width: 28
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac8984b565459ca4bbdbab974c436f9d
+      internalID: -7257933316269231746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
