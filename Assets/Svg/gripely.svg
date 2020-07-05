@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="gripely.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="3.959798"
+     inkscape:cx="37.581371"
+     inkscape:cy="89.988295"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1536"
+     inkscape:window-height="1227"
+     inkscape:window-x="802"
+     inkscape:window-y="294"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:0.0046527;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect815"
+       width="16"
+       height="48"
+       x="0"
+       y="249"
+       inkscape:export-filename="C:\UnityProjects\DonPizza\PizzaPunx2D\Assets\Spritesheets\gripelybg.png"
+       inkscape:export-xdpi="254"
+       inkscape:export-ydpi="254" />
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.00426056;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect815-8"
+       width="14"
+       height="46"
+       x="1"
+       y="250"
+       rx="1"
+       ry="1"
+       inkscape:export-filename="C:\UnityProjects\DonPizza\PizzaPunx2D\Assets\Spritesheets\gripelybg.png"
+       inkscape:export-xdpi="254"
+       inkscape:export-ydpi="254" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88474631px;line-height:1.25;font-family:Consolas;-inkscape-font-specification:Consolas;letter-spacing:0px;word-spacing:0px;fill:#808000;fill-opacity:1;stroke:none;stroke-width:0.24279664;"
+       x="1.5703856"
+       y="253.47916"
+       id="text846"
+       inkscape:export-filename="C:\UnityProjects\DonPizza\PizzaPunx2D\Assets\Spritesheets\gripelybg.png"
+       inkscape:export-xdpi="254"
+       inkscape:export-ydpi="254"><tspan
+         sodipodi:role="line"
+         id="tspan844"
+         x="1.5703856"
+         y="253.47916"
+         style="fill:#808000;stroke-width:0.24279664;">Gripe<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Gabriola;-inkscape-font-specification:Gabriola;fill:#808000;stroke-width:0.24279664;"
+   id="tspan848">ly</tspan></tspan></text>
+    <path
+       style="fill:none;stroke:#808000;stroke-width:0.26601613px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 0.98358949,255.04464 H 14.977306"
+       id="path850"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\UnityProjects\DonPizza\PizzaPunx2D\Assets\Spritesheets\gripelybg.png"
+       inkscape:export-xdpi="254"
+       inkscape:export-ydpi="254" />
+    <path
+       style="fill:none;stroke:#808000;stroke-width:0.26601613px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 0.9997003,292.26349 H 14.993418"
+       id="path850-2"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\UnityProjects\DonPizza\PizzaPunx2D\Assets\Spritesheets\gripelybg.png"
+       inkscape:export-xdpi="254"
+       inkscape:export-ydpi="254" />
+  </g>
+</svg>
