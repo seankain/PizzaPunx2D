@@ -119,6 +119,7 @@ public class GradeInputManager : MonoBehaviour
 
     public void SetIsGood(int goodBad)
     {
+        Debug.Log(goodBad);
         isGood = goodBad;
     }
 
