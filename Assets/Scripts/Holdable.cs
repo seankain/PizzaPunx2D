@@ -11,13 +11,13 @@ public class Holdable : MonoBehaviour
 
     public void Pickup()
     {
-        if (OnPickup != null) OnPickup.Invoke();
+        if (OnPickup != null) { OnPickup.Invoke(); }
         Debug.Log("Picked Up");
     }
 
     public void Drop(PlacementSocket[] potentialPlaces)
     {
-        if (OnDrop != null) OnDrop.Invoke();
+        if (OnDrop != null) { OnDrop.Invoke(); }
         Debug.Log("Dropped");
 
         var targetSocket = FindNearestSocket(potentialPlaces);

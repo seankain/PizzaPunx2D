@@ -1,7 +1,37 @@
 fileFormatVersion: 2
 guid: 5d1c08df0da11d644a358950e43c05c0
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -1172056201729946235
+    second: Yellow_free_16x16_0
+  - first:
+      213: 4438246804333141651
+    second: Yellow_free_16x16_1
+  - first:
+      213: -4042953586911890473
+    second: Yellow_free_16x16_2
+  - first:
+      213: -1566180279295875176
+    second: Yellow_free_16x16_3
+  - first:
+      213: 6047590177673234346
+    second: Yellow_free_16x16_4
+  - first:
+      213: -7068859860175491850
+    second: Yellow_free_16x16_5
+  - first:
+      213: 9091338335910728396
+    second: Yellow_free_16x16_6
+  - first:
+      213: -1990597161085839538
+    second: Yellow_free_16x16_7
+  - first:
+      213: -4920349396319645570
+    second: Yellow_free_16x16_8
+  - first:
+      213: -1268219292611690519
+    second: Yellow_free_16x16_9
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -96,7 +126,217 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Yellow_free_16x16_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 320
+        width: 64
+        height: 79
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9251d8140e9e3cc4597da9e3e7caa52c
+      internalID: -1172056201729946235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellow_free_16x16_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 320
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a490a9e374cf6f54f9d228c0449ff674
+      internalID: 4438246804333141651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellow_free_16x16_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 337
+        width: 16
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f809fef004c4c974c9cd177043bf7775
+      internalID: -4042953586911890473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellow_free_16x16_3
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 191
+        width: 48
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 956e8e3020712b041bab2175017d018f
+      internalID: -1566180279295875176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellow_free_16x16_4
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 112
+        width: 45
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36569a7a80686494ab6b330da6616940
+      internalID: 6047590177673234346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellow_free_16x16_5
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 257
+        width: 96
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25d025f305989254d9597c490be80003
+      internalID: -7068859860175491850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellow_free_16x16_6
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 205
+        width: 37
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dc5ed0b3a65db7499bc023c093aaea4
+      internalID: 9091338335910728396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellow_free_16x16_7
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 140
+        width: 36
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f946c0d495cf28c4ea244fff219e1fcf
+      internalID: -1990597161085839538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellow_free_16x16_8
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 192
+        width: 32
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d63c7d21faa93f24981fcf6c08d3f275
+      internalID: -4920349396319645570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yellow_free_16x16_9
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 222
+        width: 28
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32ac43f7e0d2bbf4bab59153bcb9b15e
+      internalID: -1268219292611690519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
