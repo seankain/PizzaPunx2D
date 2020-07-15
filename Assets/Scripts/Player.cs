@@ -70,20 +70,14 @@ public class Player : MonoBehaviour
 
         if (moveKeyDown)
         {
-            //if (speed < maxSpeed)
-            //{
-            //    speed += acceleration;
-            //}
             speed = targetSpeed;
         }
         else
         {
-            //if (speed > 0)
-            //{
-            //    speed -= acceleration;
-            //}
+            anim.SetInteger("Direction", -1); // Goin' nowhere
             speed = 0;
         }
+
         anim.SetFloat("Speed", speed);
         this.transform.position += new Vector3(direction.x * speed, direction.y * speed, 0);
         if (interacting) { TestInteract(); }
