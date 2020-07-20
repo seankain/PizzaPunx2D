@@ -22,16 +22,10 @@ public class Player : MonoBehaviour
     [SerializeField]
     private Transform holdLocation;
 
-    public PlacementSocket[] placesToPutThings;
 
     // Start is called before the first frame update
     void Start()
     {
-        placesToPutThings = FindObjectsOfType<PlacementSocket>();
-        if (placesToPutThings == null || placesToPutThings.Length == 0)
-        {
-            Debug.LogError("There's no place to put anything");
-        }
         anim = GetComponent<Animator>();
     }
 
@@ -95,25 +89,36 @@ public class Player : MonoBehaviour
         if (currentHolding != null)
         {
             //interactable that is holdable is released
-            currentHolding.Drop(placesToPutThings);
+            currentHolding.Drop();
             currentHolding = null;
             return;
         }
         var interactables = FindObjectsOfType<Interactable>();
+
+        Interactable closestItem = null;
+        var closestDist = float.MaxValue;
+
         foreach (var interactable in interactables)
         {
-            if(Vector3.Distance(interactable.transform.position,gameObject.transform.position) < interactDistance)
+            var dist = Vector3.Distance(interactable.transform.position, gameObject.transform.position);
+            if (dist < interactDistance && dist < closestDist)
             {
-                //Can it be held?
-                var holdable = interactable.gameObject.GetComponent<Holdable>();
-                if (holdable != null)
-                {
-                    currentHolding = holdable;
-                    currentHolding.Pickup();
-                }
-
-                //Todo otherwise interact
+                closestItem = interactable;
+                closestDist = dist;
             }
+        }
+
+        if (closestItem != null)
+        {
+            //Can it be held?
+            var holdable = closestItem.GetComponent<Holdable>();
+            if (holdable != null)
+            {
+                currentHolding = holdable;
+                currentHolding.Pickup();
+            }
+
+            //Todo otherwise interact
         }
     }
 }

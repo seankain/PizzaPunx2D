@@ -54,6 +54,9 @@ TagManager:
   - name: Countertops
     uniqueID: 234437263
     locked: 0
+  - name: CuttingBoards
+    uniqueID: 1569632763
+    locked: 0
   - name: CountertopContents
     uniqueID: 1713583049
     locked: 0

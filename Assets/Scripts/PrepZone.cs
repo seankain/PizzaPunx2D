@@ -11,24 +11,24 @@ public class PrepZone : MonoBehaviour
     private Pizza pizza;
     private bool passed = false;
     private List<GameObject> adulterants { get; set; }
-    public List<string> RequiredIngredients;
+    public List<PizzaIngredient.PizzaInredientType> RequiredIngredients;
     // Start is called before the first frame update
     void Start()
     {
-        currentIngredients = new List<PizzaIngredient>();
+        RequiredIngredients = new List<PizzaIngredient.PizzaInredientType>();
         RequiredIngredients.Sort();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var player = collision.gameObject.GetComponent<Player>();
-        if(player != null) { return; }
+        if (player != null) { return; }
         var ingredient = collision.gameObject.GetComponent<PizzaIngredient>();
         if (ingredient != null)
         {
@@ -54,7 +54,7 @@ public class PrepZone : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         var player = collision.gameObject.GetComponent<Player>();
-        if(player != null) { return; }
+        if (player != null) { return; }
         var ingredient = collision.gameObject.GetComponent<PizzaIngredient>();
         if (ingredient == null)
         {
@@ -71,10 +71,11 @@ public class PrepZone : MonoBehaviour
 
     private bool HasRequiredIngredients()
     {
-        if(RequiredIngredients.Count == 0) { return true; }
-        var ingredients = currentIngredients.OrderBy(i => i.Name).Select(i => i.Name).ToArray();
-        
-        if(ingredients.Length < RequiredIngredients.Count) { return false; }
+        if (RequiredIngredients.Count == 0 && currentIngredients.Count == 0) return true;
+        if (RequiredIngredients.Count != currentIngredients.Count) return false;
+
+        var ingredients = currentIngredients.OrderBy(i => i.Ingredient).Select(i => i.Ingredient).ToArray();
+
         for (var i = 0; i < ingredients.Length; i++)
         {
             if (ingredients[i] != RequiredIngredients[i]) { return false; }
