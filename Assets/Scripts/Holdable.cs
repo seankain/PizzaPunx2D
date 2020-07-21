@@ -36,6 +36,7 @@ public class Holdable : MonoBehaviour
         var targetSocket = FindNearestSocket();
         targetSocket.OccupiedBy = gameObject;
         CurrentSocket = targetSocket;
+        CurrentSocket.Activate();
         StartCoroutine(DriftToSpotCo(targetSocket.transform.position));
     }
 

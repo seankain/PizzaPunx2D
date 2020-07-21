@@ -15,4 +15,13 @@ public class PlacementSocket : MonoBehaviour
     {
         if (OnActivate != null) OnActivate.Invoke();
     }
+
+    public void Consume(float delay)
+    {
+        if (OccupiedBy != null)
+        {
+            Destroy(OccupiedBy, delay);
+            OccupiedBy = null;
+        }
+    }
 }
