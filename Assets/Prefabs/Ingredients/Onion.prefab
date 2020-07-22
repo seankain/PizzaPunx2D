@@ -96,6 +96,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3dd814a7f9c51734790a7bdcd1f975ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TimeToSocket: 0.2
+  ItemType: 0
+  CurrentSocket: {fileID: 0}
+  HeldSortingLayer: HeldItem
+  DroppedSortingLayer: CountertopContents
   OnPickup:
     m_PersistentCalls:
       m_Calls: []
@@ -106,9 +111,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
-  TimeToSocket: 0.2
-  ItemType: 0
-  CurrentSocket: {fileID: 0}
 --- !u!114 &1871184956671193284
 MonoBehaviour:
   m_ObjectHideFlags: 0

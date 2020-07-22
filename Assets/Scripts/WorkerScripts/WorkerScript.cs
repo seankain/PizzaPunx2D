@@ -8,6 +8,7 @@ public class WorkerScript : MonoBehaviour
 
     public PlacementSocket PizzaSocket;
     public PlacementSocket IngredientSocket;
+    public int ToStage;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,15 @@ public class WorkerScript : MonoBehaviour
         {
             if (myParticles) myParticles.Play();
             IngredientSocket.Consume(1.5f);
+            StartCoroutine(ProgressPizzaCo(2.0f));
         }
+    }
+
+    private IEnumerator ProgressPizzaCo(float wait)
+    {
+        yield return new WaitForSeconds(wait);
+
+        var ps = PizzaSocket.OccupiedBy.GetComponentInChildren<Pizza>();
+        if (ps != null) ps.ProgressStage(ToStage);
     }
 }

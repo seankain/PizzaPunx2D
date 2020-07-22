@@ -6,16 +6,21 @@ using UnityEngine.Events;
 
 public class Holdable : MonoBehaviour
 {
-    public UnityEvent OnPickup;
-    public UnityEvent OnDrop;
     public float TimeToSocket = 0.2f;
     public PlacementSocketType ItemType;
     public PlacementSocket CurrentSocket;
+    public string HeldSortingLayer;
+    public string DroppedSortingLayer;
 
+    public UnityEvent OnPickup;
+    public UnityEvent OnDrop;
+
+    private SpriteRenderer ren;
     private GameManager gameManager;
 
     public void Start()
     {
+        ren = GetComponentInChildren<SpriteRenderer>();
         gameManager = FindObjectOfType<GameManager>();
         Drop();
     }
@@ -24,8 +29,9 @@ public class Holdable : MonoBehaviour
     {
         if (OnPickup != null) { OnPickup.Invoke(); }
         Debug.Log("Picked Up");
-        CurrentSocket.OccupiedBy = null;
+        CurrentSocket.Release();
         CurrentSocket = null;
+        ren.sortingLayerName = HeldSortingLayer;
     }
 
     public void Drop()
@@ -34,10 +40,15 @@ public class Holdable : MonoBehaviour
         Debug.Log("Dropped");
 
         var targetSocket = FindNearestSocket();
-        targetSocket.OccupiedBy = gameObject;
-        CurrentSocket = targetSocket;
-        CurrentSocket.Activate();
-        StartCoroutine(DriftToSpotCo(targetSocket.transform.position));
+        if (targetSocket != null)
+        {
+            targetSocket.OccupiedBy = gameObject;
+            targetSocket.Activate();
+            CurrentSocket = targetSocket;
+            CurrentSocket.Activate();
+            ren.sortingLayerName = DroppedSortingLayer;
+            StartCoroutine(DriftToSpotCo(targetSocket.transform.position));
+        }
     }
 
     IEnumerator DriftToSpotCo(Vector3 targetPosition)

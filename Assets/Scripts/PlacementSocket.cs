@@ -10,6 +10,13 @@ public class PlacementSocket : MonoBehaviour
     public PlacementSocketType SocketType = PlacementSocketType.Ingredient;
     public GameObject OccupiedBy;
     public UnityEvent OnActivate;
+    public UnityEvent OnRelease;
+
+    public void Release()
+    {
+        OccupiedBy = null;
+        if (OnRelease != null) OnRelease.Invoke();
+    }
 
     public void Activate()
     {
