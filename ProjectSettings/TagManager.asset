@@ -60,12 +60,15 @@ TagManager:
   - name: HeldItems
     uniqueID: 4226957295
     locked: 0
-  - name: UI
-    uniqueID: 14381027
-    locked: 0
   - name: Colleagues
     uniqueID: 1802926733
     locked: 0
   - name: Player
     uniqueID: 1546015155
+    locked: 0
+  - name: Topmost
+    uniqueID: 171343435
+    locked: 0
+  - name: UI
+    uniqueID: 14381027
     locked: 0
