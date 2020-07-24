@@ -68,7 +68,14 @@ public class Holdable : MonoBehaviour
 
     private PlacementSocket FindNearestSocket()
     {
-        PlacementSocket[] properSockets = gameManager.PizzaSockets.Where(a => a.OccupiedBy == null).ToArray();
+        var sockets = gameManager.PizzaSockets.Where(a => a.OccupiedBy == null);
+        if (sockets.Count() == 0)
+        {
+            Debug.LogWarning("No sockets!");
+            return null;
+        }
+
+        PlacementSocket[] properSockets = sockets.ToArray();
         if (ItemType == PlacementSocketType.Ingredient) properSockets = gameManager.IngredientSockets.Where(a => a.OccupiedBy == null).ToArray();
 
         PlacementSocket currentSocket = null;
