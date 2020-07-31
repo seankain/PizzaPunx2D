@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -93,7 +94,7 @@ public class Player : MonoBehaviour
             currentHolding = null;
             return;
         }
-        var interactables = FindObjectsOfType<Interactable>();
+        var interactables = FindObjectsOfType<Interactable>().Where(a => a.isLocked == false);
 
         Interactable closestItem = null;
         var closestDist = float.MaxValue;

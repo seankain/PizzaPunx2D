@@ -18,10 +18,14 @@ public class Holdable : MonoBehaviour
     private SpriteRenderer ren;
     private GameManager gameManager;
 
-    public void Start()
+    public void Awake()
     {
         ren = GetComponentInChildren<SpriteRenderer>();
         gameManager = FindObjectOfType<GameManager>();
+    }
+
+    public void Start()
+    {
         Drop();
     }
 
@@ -47,11 +51,11 @@ public class Holdable : MonoBehaviour
             CurrentSocket = targetSocket;
             CurrentSocket.Activate();
             ren.sortingLayerName = DroppedSortingLayer;
-            StartCoroutine(DriftToSpotCo(targetSocket.transform.position));
+            StartCoroutine(DriftToSpotCo(targetSocket));
         }
     }
 
-    IEnumerator DriftToSpotCo(Vector3 targetPosition)
+    IEnumerator DriftToSpotCo(PlacementSocket targetSocket)
     {
         var elapsed = 0f;
         var startPosition = transform.position;
@@ -59,11 +63,12 @@ public class Holdable : MonoBehaviour
         while (elapsed < TimeToSocket)
         {
             elapsed += Time.deltaTime;
-            transform.position = Vector3.Lerp(startPosition, targetPosition, elapsed / TimeToSocket);
+            transform.position = Vector3.Lerp(startPosition, targetSocket.transform.position, elapsed / TimeToSocket);
             yield return null;
         }
 
-        transform.position = targetPosition;
+        transform.position = targetSocket.transform.position;
+        targetSocket.ContentArrive();
     }
 
     private PlacementSocket FindNearestSocket()

@@ -11,6 +11,7 @@ public class PlacementSocket : MonoBehaviour
     public GameObject OccupiedBy;
     public UnityEvent OnActivate;
     public UnityEvent OnRelease;
+    public UnityEvent OnContentArrive;
 
     public void Release()
     {
@@ -23,10 +24,17 @@ public class PlacementSocket : MonoBehaviour
         if (OnActivate != null) OnActivate.Invoke();
     }
 
+    public void ContentArrive()
+    {
+        if (OnContentArrive != null) OnContentArrive.Invoke();
+    }
+
     public void Consume(float delay)
     {
         if (OccupiedBy != null)
         {
+            var i = OccupiedBy.GetComponent<Interactable>();
+            i.isLocked = true;
             Destroy(OccupiedBy, delay);
             OccupiedBy = null;
         }

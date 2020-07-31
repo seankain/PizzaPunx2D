@@ -28,9 +28,14 @@ public class WorkerScript : MonoBehaviour
 
     private IEnumerator ProgressPizzaCo(float wait)
     {
+        var ps = PizzaSocket.OccupiedBy.GetComponentInChildren<Pizza>();
+        if (ps == null) Debug.LogError("Pizze script missing?");
+        var i = ps.GetComponent<Interactable>();
+        i.isLocked = true;
+
         yield return new WaitForSeconds(wait);
 
-        var ps = PizzaSocket.OccupiedBy.GetComponentInChildren<Pizza>();
-        if (ps != null) ps.ProgressStage(ToStage);
+        ps.ProgressStage(ToStage);
+        i.isLocked = false;
     }
 }

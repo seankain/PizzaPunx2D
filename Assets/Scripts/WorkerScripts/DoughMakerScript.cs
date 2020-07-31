@@ -30,7 +30,6 @@ public class DoughMakerScript : MonoBehaviour
 
         var pizza = Instantiate(PizzaPrefab);
         pizza.transform.position = transform.position;
-        var hs = pizza.GetComponentInChildren<Holdable>();
-        if (hs) hs.Drop();
+        // Pizza auto-drops on creation
     }
 }

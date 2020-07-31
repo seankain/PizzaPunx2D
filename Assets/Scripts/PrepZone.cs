@@ -12,8 +12,9 @@ public class PrepZone : MonoBehaviour
     private bool passed = false;
     private List<GameObject> adulterants { get; set; }
     public List<PizzaIngredient.PizzaInredientType> RequiredIngredients;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         RequiredIngredients = new List<PizzaIngredient.PizzaInredientType>();
         RequiredIngredients.Sort();
