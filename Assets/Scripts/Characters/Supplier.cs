@@ -9,15 +9,12 @@ public class Supplier : MonoBehaviour
     public PlacementSocket sourceSocket;
     public float deliveryX = 0.75f;
     public float homeX = 3.25f;
+    public Animator anim;
+    public Holdable currentHolding;
+    public Transform holdLocation;
 
-    [SerializeField]
-    private Animator anim;
     private float speed = 0;
     private Vector2 direction = Vector2.zero;
-    [SerializeField]
-    private Holdable currentHolding;
-    [SerializeField]
-    private Transform holdLocation;
 
     private enum MovementState { entering, waiting, returning, idle }
 

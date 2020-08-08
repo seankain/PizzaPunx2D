@@ -1,17 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public class CursorController : MonoBehaviour
 {
     [SerializeField]
-    private Texture2D cursorTexture;
+    public Texture2D cursorTexture;
     [SerializeField]
-    private Player player;
+    public Player player;
     [SerializeField]
-    private UIRayTest rayTest;
+    public UIRayTest rayTest;
 
     // Start is called before the first frame update
     void Start()

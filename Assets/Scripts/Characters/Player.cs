@@ -6,16 +6,14 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float targetSpeed = 0.05f;
+    public Transform holdLocation;
+    public float interactDistance = 0.4f;
+
     private Animator anim;
     private float speed = 0;
     private Vector2 direction = Vector2.zero;
-    [SerializeField]
-    private float interactDistance = 0.4f;
     private bool interacting = false;
     private Holdable currentHolding;
-    [SerializeField]
-    private Transform holdLocation;
-
 
     // Start is called before the first frame update
     void Start()
