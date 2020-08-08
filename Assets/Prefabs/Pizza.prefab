@@ -4728,7 +4728,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1098550629
-  m_SortingLayer: 9
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -4768,6 +4768,7 @@ GameObject:
   - component: {fileID: 5919561411291976523}
   - component: {fileID: 5919561411291976526}
   - component: {fileID: 5919561411291976529}
+  - component: {fileID: -5848814733950795033}
   m_Layer: 0
   m_Name: Pizza
   m_TagString: Untagged
@@ -4835,6 +4836,7 @@ MonoBehaviour:
     type: 3}
   Cookedparticles: {fileID: 5879923816281594112}
   BurntParticles: {fileID: 3130952860671020702}
+  stage: 0
 --- !u!212 &5919561411291976525
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4871,7 +4873,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1713583049
-  m_SortingLayer: 5
+  m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -5901409185869581511, guid: d26f4af8fa19a31498fd0c49cbd29c05,
     type: 3}
@@ -4914,7 +4916,7 @@ MonoBehaviour:
   ItemType: 1
   CurrentSocket: {fileID: 0}
   HeldSortingLayer: HeldItem
-  DroppedSortingLayer: CountertopContents
+  DroppedSortingLayer: Countertops
   OnPickup:
     m_PersistentCalls:
       m_Calls: []
@@ -4972,6 +4974,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &-5848814733950795033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5919561411291976520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5cfba64f82a46b4fb45a749acc43273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orderAdjust: 3
 --- !u!1 &6009319849677573213
 GameObject:
   m_ObjectHideFlags: 0
@@ -9700,7 +9715,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1098550629
-  m_SortingLayer: 9
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0

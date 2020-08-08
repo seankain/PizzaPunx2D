@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1871184956671193285}
   - component: {fileID: 1871184956671193284}
   - component: {fileID: 1871184956671193283}
+  - component: {fileID: 7565972320243631044}
   m_Layer: 0
   m_Name: Onion
   m_TagString: Untagged
@@ -69,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1713583049
-  m_SortingLayer: 5
+  m_SortingLayerID: 234437263
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -184461364336496222, guid: 88ad310310beb7a4da1d4df072d74f31,
     type: 3}
@@ -100,7 +101,7 @@ MonoBehaviour:
   ItemType: 0
   CurrentSocket: {fileID: 0}
   HeldSortingLayer: HeldItem
-  DroppedSortingLayer: CountertopContents
+  DroppedSortingLayer: Countertops
   OnPickup:
     m_PersistentCalls:
       m_Calls: []
@@ -137,3 +138,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Ingredient: 8
+--- !u!114 &7565972320243631044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871184956671193288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5cfba64f82a46b4fb45a749acc43273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orderAdjust: 0

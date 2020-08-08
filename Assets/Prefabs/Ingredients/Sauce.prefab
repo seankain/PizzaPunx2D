@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4739019071423688762}
   - component: {fileID: 4739019071423688763}
   - component: {fileID: 4739019071423688756}
+  - component: {fileID: 7364685223655184511}
   m_Layer: 0
   m_Name: Sauce
   m_TagString: Untagged
@@ -69,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1713583049
-  m_SortingLayer: 5
+  m_SortingLayerID: 234437263
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -3474288448338781089, guid: 88ad310310beb7a4da1d4df072d74f31,
     type: 3}
@@ -96,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7bb85dec9875da4780eb497e8d1a2b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isLocked: 0
 --- !u!114 &4739019071423688763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,7 +114,7 @@ MonoBehaviour:
   ItemType: 0
   CurrentSocket: {fileID: 0}
   HeldSortingLayer: HeldItem
-  DroppedSortingLayer: CountertopContents
+  DroppedSortingLayer: Countertops
   OnPickup:
     m_PersistentCalls:
       m_Calls: []
@@ -136,3 +138,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Ingredient: 0
+--- !u!114 &7364685223655184511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4739019071423688759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5cfba64f82a46b4fb45a749acc43273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orderAdjust: 0

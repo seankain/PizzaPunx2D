@@ -32,7 +32,6 @@ public class Holdable : MonoBehaviour
     public void Pickup()
     {
         if (OnPickup != null) { OnPickup.Invoke(); }
-        Debug.Log("Picked Up");
         CurrentSocket.Release();
         CurrentSocket = null;
         ren.sortingLayerName = HeldSortingLayer;
@@ -41,7 +40,6 @@ public class Holdable : MonoBehaviour
     public void Drop()
     {
         if (OnDrop != null) { OnDrop.Invoke(); }
-        Debug.Log("Dropped");
 
         var targetSocket = FindNearestSocket();
         if (targetSocket != null)

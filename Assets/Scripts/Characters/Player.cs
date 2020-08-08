@@ -6,13 +6,6 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float targetSpeed = 0.05f;
-    [SerializeField]
-    private float maxSpeed = 0.2f;
-    [SerializeField]
-    private float acceleration = 0.01f;
-    private float elapsed = 0;
-    [SerializeField]
-    private float inputRateHz = 5;
     private Animator anim;
     private float speed = 0;
     private Vector2 direction = Vector2.zero;
