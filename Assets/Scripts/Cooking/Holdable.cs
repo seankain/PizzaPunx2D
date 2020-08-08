@@ -9,6 +9,7 @@ public class Holdable : MonoBehaviour
     public float TimeToSocket = 0.2f;
     public PlacementSocketType ItemType;
     public PlacementSocket CurrentSocket;
+    public PlacementSocket preferredSocket;
     public string HeldSortingLayer;
     public string DroppedSortingLayer;
 
@@ -17,6 +18,7 @@ public class Holdable : MonoBehaviour
 
     private SpriteRenderer ren;
     private GameManager gameManager;
+    
 
     public void Awake()
     {
@@ -27,6 +29,11 @@ public class Holdable : MonoBehaviour
     public void Start()
     {
         Drop();
+    }
+
+    public void SetPreferredSocket(PlacementSocket s)
+    {
+        preferredSocket = s;
     }
 
     public void Pickup()
@@ -42,6 +49,12 @@ public class Holdable : MonoBehaviour
         if (OnDrop != null) { OnDrop.Invoke(); }
 
         var targetSocket = FindNearestSocket();
+        if (preferredSocket != null && preferredSocket.OccupiedBy == null)
+        {
+            targetSocket = preferredSocket;
+            preferredSocket = null;
+        }
+
         if (targetSocket != null)
         {
             targetSocket.OccupiedBy = gameObject;
