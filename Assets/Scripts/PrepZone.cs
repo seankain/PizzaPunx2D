@@ -44,12 +44,14 @@ public class PrepZone : MonoBehaviour
                 adulterants.Add(collision.gameObject);
             }
         }
+        /*
         if (pizza != null && !passed && HasRequiredIngredients())
         {
             Debug.Log($"Stage {stageNumber} passed.");
             pizza.ProgressStage(stageNumber);
             passed = true;
         }
+        */
     }
 
     private void OnTriggerExit2D(Collider2D collision)
