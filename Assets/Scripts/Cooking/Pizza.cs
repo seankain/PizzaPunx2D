@@ -38,6 +38,11 @@ public class Pizza : MonoBehaviour
 
     public PizzaStage stage = PizzaStage.dough;
 
+    public int GetNumToppings()
+    {
+        return AddedIngredients.Count - 2;
+    }
+
     protected PizzaType getPizzaType()
     {
         bool hasCheese = false;

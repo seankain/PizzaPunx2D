@@ -27,6 +27,7 @@ public class GripelyReview : MonoBehaviour
         isSliding = true;
         slideDirection = -1;
     }
+
     public void Show() {
         GenerateReview();
         isSliding = true;

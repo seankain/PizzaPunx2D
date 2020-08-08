@@ -17,6 +17,13 @@ public class ShowReview : MonoBehaviour
     public float closedPosition = 2.9f;
     public float openPosition = 0f;
 
+    public float basePizzaFee = 100;
+    public float perToppingFee = 10;
+    public float penaltyForMissedReview = 0.5f;
+    public float penaltyForWrongButton = 0.75f;
+    public float rewardForRightButton = 1.1f;
+    public float rewardForGoodReview = 1.05f;
+
     ReviewStatus currentStatus;
     ReviewData currentReview;
     ReviewData nextReview;
@@ -63,6 +70,11 @@ public class ShowReview : MonoBehaviour
     private void Start()
     {
         DisplayReview(-1, InitialText, true);
+    }
+
+    public void DisplayNewReview()
+    {
+        DisplayReview(0, DebuggingReviewCorpus.GenerateReview(), true);
     }
 
     public void DisplayReview(int id, string text, bool isGood)
