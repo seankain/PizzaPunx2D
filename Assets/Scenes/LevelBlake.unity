@@ -6313,7 +6313,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 182baf4dbdac1b24ab41919daf755622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteSheetTexture: {fileID: 2800000, guid: 8d7c49d6e8a6fb34e8b4476c100b51fe, type: 3}
+  spriteSheetTexture: {fileID: 2800000, guid: b93f1d54225d9094d91a2e2c9fda4c7a, type: 3}
 --- !u!114 &286397111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8276,6 +8276,7 @@ GameObject:
   - component: {fileID: 641269654}
   - component: {fileID: 641269655}
   - component: {fileID: 641269656}
+  - component: {fileID: 641269657}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -8432,6 +8433,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &641269657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 641269650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 182baf4dbdac1b24ab41919daf755622, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteSheetTexture: {fileID: 2800000, guid: a1a84e1b08c0d94459a6b6befd54efef, type: 3}
 --- !u!1 &642987130
 GameObject:
   m_ObjectHideFlags: 0
@@ -9121,7 +9135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 182baf4dbdac1b24ab41919daf755622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteSheetTexture: {fileID: 2800000, guid: 8d7c49d6e8a6fb34e8b4476c100b51fe, type: 3}
+  spriteSheetTexture: {fileID: 2800000, guid: 680ee0f27cefb06458dbe5ef592e6cad, type: 3}
 --- !u!114 &764142532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26106,7 +26120,7 @@ SpriteRenderer:
   m_SortingLayerID: 1802926733
   m_SortingLayer: 7
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5724790667357258772, guid: 8c9feb66ec3163044ace960b0b2ba7eb,
+  m_Sprite: {fileID: -260289136790680178, guid: 8d7c49d6e8a6fb34e8b4476c100b51fe,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -31341,7 +31355,7 @@ SpriteRenderer:
   m_SortingLayerID: 1802926733
   m_SortingLayer: 7
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2435245455540721227, guid: 8c9feb66ec3163044ace960b0b2ba7eb,
+  m_Sprite: {fileID: -6596540786895615564, guid: b93f1d54225d9094d91a2e2c9fda4c7a,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -31385,7 +31399,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.453125, y: 0.96875}
+    oldSize: {x: 0.375, y: 0.953125}
     newSize: {x: 0.421875, y: 0.96875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
