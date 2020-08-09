@@ -1447,8 +1447,8 @@ MonoBehaviour:
   - {fileID: 156341617}
   - {fileID: 257869565}
   - {fileID: 1564615433}
-  StageLengthSeconds: 360
-  OrderCutoffTime: 330
+  StageLengthSeconds: 240
+  OrderCutoffTime: 210
   CurrentStageTime: 0
   currentGameStage: 0
   IngredientsPerStage:
@@ -1743,6 +1743,8 @@ MonoBehaviour:
     value: {fileID: 6817209534799424708, guid: e1f508a12fb124841a7c9076ebef6820, type: 3}
   - key: 12
     value: {fileID: 2182530268119638692, guid: a4e554ebbb4892e42b569a8f4a55524b, type: 3}
+  - key: 1
+    value: {fileID: 7405837897261162452, guid: f7d29a67a3bdc1f4fa2a4e4b0cc4e614, type: 3}
 --- !u!1001 &265730283
 PrefabInstance:
   m_ObjectHideFlags: 0

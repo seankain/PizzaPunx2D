@@ -57,6 +57,19 @@ public class OrderManager : MonoBehaviour
         return topping;
     }
 
+    public List<PizzaIngredient.PizzaInredientType> AllNeededIngredients()
+    {
+        var result = new List<PizzaIngredient.PizzaInredientType>();
+
+        var openOrders = allOrders.Where(a => a.isOrderComplete == false);
+        foreach (var order in openOrders)
+        {
+            result.AddRange(order.ingredients);
+        }
+
+        return result;
+    }
+
     public void CreateOrder()
     {
         timeUntilNextOrder = timeBetweenOrders + Random.Range(-orderRandomness, orderRandomness);
