@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public OrderManager orderManager;
+    public MoneyDisplay moneyDisplay;
     public List<PlacementSocket> PizzaSockets;
     public List<PlacementSocket> IngredientSockets;
 }

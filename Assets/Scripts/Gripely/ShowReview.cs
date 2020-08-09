@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class ShowReview : MonoBehaviour
@@ -20,16 +21,12 @@ public class ShowReview : MonoBehaviour
     public float closedPosition = 2.9f;
     public float openPosition = 0f;
 
-    public float basePizzaFee = 100;
-    public float perToppingFee = 10;
-    public float penaltyForMissedReview = 0.5f;
-    public float penaltyForWrongButton = 0.75f;
-    public float rewardForRightButton = 1.1f;
-    public float rewardForGoodReview = 1.05f;
-
     ReviewStatus currentStatus;
     ReviewData currentReview;
     ReviewData nextReview;
+    GameManager gameManager;
+
+    Queue<int> reviewsToComplete;
 
     GameStage currentGameStage = GameStage.early;
     Dictionary<GameStage, List<Review>> pizzaReviews;
@@ -81,6 +78,12 @@ public class ShowReview : MonoBehaviour
 
     private void Start()
     {
+        reviewsToComplete = new Queue<int>();
+        reviewsToComplete.Enqueue(int.MinValue);
+
+        gameManager = FindObjectOfType<GameManager>();
+        if (gameManager == null) Debug.LogError("No game manager found!");
+
         DisplayReview(-1, InitialText, true);
         var textFile = Resources.Load<TextAsset>("reviews");
         var reviews = JsonConvert.DeserializeObject<Dictionary<int, Review>>(textFile.text);
@@ -92,8 +95,9 @@ public class ShowReview : MonoBehaviour
         pizzaReviews.Add(GameStage.late, keepers.Where(a => a.gameStage == 2).ToList());
     }
 
-    public void DisplayNewReview()
+    public void DisplayNewReview(int orderId)
     {
+        reviewsToComplete.Enqueue(orderId);
         DisplayReview(GetRandomReview());
     }
 
@@ -102,7 +106,7 @@ public class ShowReview : MonoBehaviour
         DisplayReview(0, r.content, r.isGood == 1);
     }
 
-    public void DisplayReview(int id, string text, bool isGood)
+    void DisplayReview(int id, string text, bool isGood)
     {
         switch (currentStatus)
         {
@@ -182,15 +186,23 @@ public class ShowReview : MonoBehaviour
         currentStatus = ReviewStatus.closed;
     }
 
-    public ReviewGrade CloseReview(bool groundTruth, bool? grade)
+    public ReviewGrade CloseReview(bool isGoodReview, bool? grade)
     {
         AnimateClosing();
 
-        if (grade.HasValue == false) return ReviewGrade.missed;
+        var result = ReviewGrade.missed;
 
-        if (groundTruth == grade.Value) return ReviewGrade.correct;
+        if (grade.HasValue)
+        {
+            if (isGoodReview == grade.Value) result = ReviewGrade.correct;
+            else result = ReviewGrade.incorrect;
+        }
 
-        return ReviewGrade.incorrect;
+        var orderId = reviewsToComplete.Dequeue();
+
+        gameManager.orderManager.PizzaReviewed(orderId, isGoodReview, result);
+
+        return result;
     }
 
     // Update is called once per frame

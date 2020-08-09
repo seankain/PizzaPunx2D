@@ -24,12 +24,12 @@ public class PlacementSocket : MonoBehaviour
         if (OnActivate != null) OnActivate.Invoke();
     }
 
-    public void ContentArrive()
+    public virtual void ContentArrive(Holdable thingArriving)
     {
         if (OnContentArrive != null) OnContentArrive.Invoke();
     }
 
-    public void Consume(float delay)
+    public virtual void Consume(float delay)
     {
         if (OccupiedBy != null)
         {

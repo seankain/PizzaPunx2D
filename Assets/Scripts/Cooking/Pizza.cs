@@ -43,6 +43,11 @@ public class Pizza : MonoBehaviour
         return AddedIngredients.Count - 2;
     }
 
+    public List<PizzaIngredient.PizzaInredientType> GetToppings()
+    {
+        return AddedIngredients;
+    }
+
     protected PizzaType getPizzaType()
     {
         bool hasCheese = false;

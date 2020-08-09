@@ -79,7 +79,7 @@ public class Holdable : MonoBehaviour
         }
 
         transform.position = targetSocket.transform.position;
-        targetSocket.ContentArrive();
+        targetSocket.ContentArrive(this);
     }
 
     private PlacementSocket FindNearestSocket()
