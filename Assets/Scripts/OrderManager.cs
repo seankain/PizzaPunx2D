@@ -9,6 +9,7 @@ public class OrderManager : MonoBehaviour
 {
     public float basePizzaFee = 100;
     public float perToppingFee = 10;
+    public int PizzaTrashPenalty = -20;
     public float penaltyForMissedReview = 0.5f;
     public float penaltyForWrongButton = 0.75f;
     public float rewardForRightButton = 1.1f;
@@ -151,5 +152,10 @@ public class OrderManager : MonoBehaviour
         gameManager = FindObjectOfType<GameManager>();
 
         allOrders = new List<PizzaOrder>();
+    }
+
+    public void TrashedPizza()
+    {
+        gameManager.moneyDisplay.addToFunds(PizzaTrashPenalty);
     }
 }

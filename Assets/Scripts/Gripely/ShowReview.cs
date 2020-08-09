@@ -12,6 +12,9 @@ public class ShowReview : MonoBehaviour
     public enum ReviewStatus { revealing, showing, closing, closed };
     public enum ReviewGrade { correct, incorrect, missed };
 
+    public UnityEvent OnThank;
+    public UnityEvent OnPlacate;
+
     public string InitialText;
 
     public Text textToAnimate;
@@ -211,6 +214,18 @@ public class ShowReview : MonoBehaviour
         if (currentStatus == ReviewStatus.closed && nextReview != null )
         {
             AnimateOpening();
+        }
+
+        if (Input.GetKey(KeyCode.Z))
+        {
+            Thank();
+        }
+        else
+        {
+            if (Input.GetKey(KeyCode.X))
+            {
+                Placate();
+            }
         }
     }
 }
