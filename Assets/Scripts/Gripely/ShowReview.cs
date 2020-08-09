@@ -1,10 +1,14 @@
-﻿using System.Collections;
+﻿using Newtonsoft.Json;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class ShowReview : MonoBehaviour
 {
+    public enum GameStage { early, mid, late }
     public enum ReviewStatus { revealing, showing, closing, closed };
     public enum ReviewGrade { correct, incorrect, missed };
 
@@ -20,6 +24,12 @@ public class ShowReview : MonoBehaviour
     ReviewStatus currentStatus;
     ReviewData currentReview;
     ReviewData nextReview;
+    GameManager gameManager;
+
+    Queue<int> reviewsToComplete;
+
+    GameStage currentGameStage = GameStage.early;
+    Dictionary<GameStage, List<Review>> pizzaReviews;
 
     public void Thank()
     {
@@ -36,6 +46,12 @@ public class ShowReview : MonoBehaviour
                 CloseReview(currentReview.isGoodReview, true);
                 break;
         }
+    }
+
+    Review GetRandomReview()
+    {
+        var r = pizzaReviews[currentGameStage];
+        return r[Random.Range(0, r.Count)];
     }
 
     public void Placate()
@@ -62,10 +78,35 @@ public class ShowReview : MonoBehaviour
 
     private void Start()
     {
+        reviewsToComplete = new Queue<int>();
+        reviewsToComplete.Enqueue(int.MinValue);
+
+        gameManager = FindObjectOfType<GameManager>();
+        if (gameManager == null) Debug.LogError("No game manager found!");
+
         DisplayReview(-1, InitialText, true);
+        var textFile = Resources.Load<TextAsset>("reviews");
+        var reviews = JsonConvert.DeserializeObject<Dictionary<int, Review>>(textFile.text);
+        var keepers = reviews.Values.Where(a => a.doNotUse == 0 && a.needsChecking == 0);
+        pizzaReviews = new Dictionary<GameStage, List<Review>>();
+
+        pizzaReviews.Add(GameStage.early, keepers.Where(a => a.gameStage == 0).ToList());
+        pizzaReviews.Add(GameStage.mid, keepers.Where(a => a.gameStage == 1).ToList());
+        pizzaReviews.Add(GameStage.late, keepers.Where(a => a.gameStage == 2).ToList());
     }
 
-    public void DisplayReview(int id, string text, bool isGood)
+    public void DisplayNewReview(int orderId)
+    {
+        reviewsToComplete.Enqueue(orderId);
+        DisplayReview(GetRandomReview());
+    }
+
+    public void DisplayReview(Review r)
+    {
+        DisplayReview(0, r.content, r.isGood == 1);
+    }
+
+    void DisplayReview(int id, string text, bool isGood)
     {
         switch (currentStatus)
         {
@@ -145,15 +186,23 @@ public class ShowReview : MonoBehaviour
         currentStatus = ReviewStatus.closed;
     }
 
-    public ReviewGrade CloseReview(bool groundTruth, bool? grade)
+    public ReviewGrade CloseReview(bool isGoodReview, bool? grade)
     {
         AnimateClosing();
 
-        if (grade.HasValue == false) return ReviewGrade.missed;
+        var result = ReviewGrade.missed;
 
-        if (groundTruth == grade.Value) return ReviewGrade.correct;
+        if (grade.HasValue)
+        {
+            if (isGoodReview == grade.Value) result = ReviewGrade.correct;
+            else result = ReviewGrade.incorrect;
+        }
 
-        return ReviewGrade.incorrect;
+        var orderId = reviewsToComplete.Dequeue();
+
+        gameManager.orderManager.PizzaReviewed(orderId, isGoodReview, result);
+
+        return result;
     }
 
     // Update is called once per frame

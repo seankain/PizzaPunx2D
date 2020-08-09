@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4"
-     inkscape:cx="116.80063"
-     inkscape:cy="909.43999"
+     inkscape:zoom="3.959798"
+     inkscape:cx="290.01957"
+     inkscape:cy="846.64374"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -184,9 +184,27 @@
        inkscape:export-xdpi="338.99231"
        inkscape:export-ydpi="338.99231" />
     <path
-       style="fill:#231927;fill-opacity:1;stroke:#000000;stroke-width:0.26389042px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 84.003637,83.259723 3.153085,9.531524 -29.578184,-0.04714 6.49441,-9.531528 z"
+       style="fill:#64918d;fill-opacity:1;stroke:#000000;stroke-width:0.26389042px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 105.38053,83.216856 5.56957,6.157414 -27.503402,-0.02758 -1.515256,-6.176985 z"
+       id="path1135-3-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="C:\UnityProjects\DonPizza\PizzaPunx2D\Assets\Spritesheets\room.png"
+       inkscape:export-xdpi="338.99231"
+       inkscape:export-ydpi="338.99231" />
+    <path
+       style="fill:#231927;fill-opacity:1;stroke:#000000;stroke-width:0.19667979px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 79.616577,83.194818 1.751491,9.531524 -16.430232,-0.04714 3.607546,-9.531528 z"
        id="path1135-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="C:\UnityProjects\DonPizza\PizzaPunx2D\Assets\Spritesheets\room.png"
+       inkscape:export-xdpi="338.99231"
+       inkscape:export-ydpi="338.99231" />
+    <path
+       style="fill:#64918d;fill-opacity:1;stroke:#000000;stroke-width:0.26389042px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 51.58971,83.252756 -5.469346,5.956962 17.04845,0.01967 3.212384,-6.02378 z"
+       id="path1135-3-2-1"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccc"
        inkscape:export-filename="C:\UnityProjects\DonPizza\PizzaPunx2D\Assets\Spritesheets\room.png"

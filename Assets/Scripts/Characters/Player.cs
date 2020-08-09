@@ -1,27 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
     public float targetSpeed = 0.05f;
-    [SerializeField]
-    private float maxSpeed = 0.2f;
-    [SerializeField]
-    private float acceleration = 0.01f;
-    private float elapsed = 0;
-    [SerializeField]
-    private float inputRateHz = 5;
+    public Transform holdLocation;
+    public float interactDistance = 0.4f;
+
     private Animator anim;
     private float speed = 0;
     private Vector2 direction = Vector2.zero;
-    [SerializeField]
-    private float interactDistance = 0.4f;
     private bool interacting = false;
     private Holdable currentHolding;
-    [SerializeField]
-    private Transform holdLocation;
-
 
     // Start is called before the first frame update
     void Start()
@@ -93,7 +85,7 @@ public class Player : MonoBehaviour
             currentHolding = null;
             return;
         }
-        var interactables = FindObjectsOfType<Interactable>();
+        var interactables = FindObjectsOfType<Interactable>().Where(a => a.isLocked == false);
 
         Interactable closestItem = null;
         var closestDist = float.MaxValue;

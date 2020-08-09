@@ -1,24 +1,18 @@
-﻿using System.Collections;
+﻿using Newtonsoft.Json;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class GripelyReview : MonoBehaviour
 { 
-    [SerializeField]
-    private Text ReviewTextRegion;
-    [SerializeField]
-    private Button ThankButton;
-    [SerializeField]
-    private Button PlacateButton;
-    [SerializeField]
-    private RectTransform VisibleLocation;
-    [SerializeField]
-    private RectTransform InvisibleLocation;
-    [SerializeField]
-    private float SlideSpeed;
-    [SerializeField]
-    private float ReviewsPerMinute;
+    public Text ReviewTextRegion;
+    public Button ThankButton;
+    public Button PlacateButton;
+    public RectTransform VisibleLocation;
+    public RectTransform InvisibleLocation;
+    public float SlideSpeed;
+    public float ReviewsPerMinute;
     private RectTransform selfRect;
     private float slideDirection = -1;
     private bool isSliding = false;
@@ -34,6 +28,7 @@ public class GripelyReview : MonoBehaviour
         isSliding = true;
         slideDirection = -1;
     }
+
     public void Show() {
         GenerateReview();
         isSliding = true;
