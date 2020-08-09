@@ -44,12 +44,29 @@ public class OrderManager : MonoBehaviour
         allOrders.Where(a => a.isOrderComplete == false).AsParallel().ForAll(a => a.AddWaitTime(t));
     }
 
+    public PizzaIngredient.PizzaInredientType RandomTopping()
+    {
+        var values = System.Enum.GetValues(typeof(PizzaIngredient.PizzaInredientType));
+        var topping = (PizzaIngredient.PizzaInredientType)values.GetValue(Random.Range(0, values.Length));
+
+        while (topping == PizzaIngredient.PizzaInredientType.Cheese || topping == PizzaIngredient.PizzaInredientType.Sauce)
+        {
+            topping = (PizzaIngredient.PizzaInredientType)values.GetValue(Random.Range(0, values.Length));
+        }
+
+        return topping;
+    }
+
     public void CreateOrder()
     {
-        Debug.Log("New order in!");
         timeUntilNextOrder = timeBetweenOrders + Random.Range(-orderRandomness, orderRandomness);
 
         var latestOrder = new PizzaOrder() { orderId = pizzaOrderCounter, ingredients = new List<PizzaIngredient.PizzaInredientType>() { PizzaIngredient.PizzaInredientType.Cheese, PizzaIngredient.PizzaInredientType.Sauce } };
+        var numToppings = Random.Range(0, gameManager.MaxToppingsThisStage() + 1); // max is exclusive
+        for (var i = 0; i < numToppings; i++)
+        {
+            latestOrder.ingredients.Add(RandomTopping());
+        }
         allOrders.Add(latestOrder);
         pizzaOrderCounter++;
 

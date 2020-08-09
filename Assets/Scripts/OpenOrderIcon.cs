@@ -41,5 +41,15 @@ public class OpenOrderIcon : MonoBehaviour
         {
             s.sprite = null;
         }
+
+        var spriteIndex = 0;
+        foreach (var i in myOrder.ingredients)
+        {
+            if (i != PizzaIngredient.PizzaInredientType.Cheese && i != PizzaIngredient.PizzaInredientType.Sauce)
+            {
+                ingredientSprites[spriteIndex].sprite = gameManager.ingredientSpriteManager.GetSprite(i);
+                spriteIndex++;
+            }
+        }
     }
 }

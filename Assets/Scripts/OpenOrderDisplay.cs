@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class OpenOrderDisplay : MonoBehaviour
@@ -11,6 +10,8 @@ public class OpenOrderDisplay : MonoBehaviour
 
     private void Start()
     {
+        OrderIcons = new Dictionary<int, GameObject>();
+
         gameManager = FindObjectOfType<GameManager>();
         if (gameManager == null) Debug.LogError("Game Manager is missing?");
     }
@@ -33,11 +34,5 @@ public class OpenOrderDisplay : MonoBehaviour
             OrderIcons.Remove(id);
             Destroy(go);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        OrderIcons = new Dictionary<int, GameObject>();
     }
 }

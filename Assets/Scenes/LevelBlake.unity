@@ -1416,6 +1416,7 @@ MonoBehaviour:
   orderManager: {fileID: 253970645}
   moneyDisplay: {fileID: 646751618}
   pizzaSpriteManager: {fileID: 253970646}
+  ingredientSpriteManager: {fileID: 253970647}
   PizzaSockets:
   - {fileID: 49454746}
   - {fileID: 251182168}
@@ -1449,6 +1450,14 @@ MonoBehaviour:
   StageLengthSeconds: 360
   OrderCutoffTime: 330
   CurrentStageTime: 0
+  currentGameStage: 0
+  IngredientsPerStage:
+  - stage: 0
+    maxIngredients: 1
+  - stage: 1
+    maxIngredients: 2
+  - stage: 2
+    maxIngredients: 4
 --- !u!4 &253970644
 Transform:
   m_ObjectHideFlags: 0
@@ -35105,75 +35114,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dd24b8dc78aabfb4aa597b888181df8d, type: 3}
---- !u!1001 &3896174543174542544
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3896174544284620562, guid: 717011c5b5b108b42ad573644f61b962,
-        type: 3}
-      propertyPath: m_Name
-      value: PizzaOrder
-      objectReference: {fileID: 0}
-    - target: {fileID: 3896174544284620565, guid: 717011c5b5b108b42ad573644f61b962,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.841
-      objectReference: {fileID: 0}
-    - target: {fileID: 3896174544284620565, guid: 717011c5b5b108b42ad573644f61b962,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 4.464
-      objectReference: {fileID: 0}
-    - target: {fileID: 3896174544284620565, guid: 717011c5b5b108b42ad573644f61b962,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3896174544284620565, guid: 717011c5b5b108b42ad573644f61b962,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3896174544284620565, guid: 717011c5b5b108b42ad573644f61b962,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3896174544284620565, guid: 717011c5b5b108b42ad573644f61b962,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3896174544284620565, guid: 717011c5b5b108b42ad573644f61b962,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3896174544284620565, guid: 717011c5b5b108b42ad573644f61b962,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 47
-      objectReference: {fileID: 0}
-    - target: {fileID: 3896174544284620565, guid: 717011c5b5b108b42ad573644f61b962,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3896174544284620565, guid: 717011c5b5b108b42ad573644f61b962,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3896174544284620565, guid: 717011c5b5b108b42ad573644f61b962,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 717011c5b5b108b42ad573644f61b962, type: 3}
 --- !u!1001 &4739019071548461987
 PrefabInstance:
   m_ObjectHideFlags: 0

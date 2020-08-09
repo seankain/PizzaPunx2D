@@ -1,6 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+
+[System.Serializable]
+public class IngredientMax
+{
+    public GameManager.GameStage stage;
+    public int maxIngredients;
+}
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +17,7 @@ public class GameManager : MonoBehaviour
     public OrderManager orderManager;
     public MoneyDisplay moneyDisplay;
     public PizzaSpriteManager pizzaSpriteManager;
+    public IngredientSpriteManager ingredientSpriteManager;
 
     public List<PlacementSocket> PizzaSockets;
     public List<PlacementSocket> IngredientSockets;
@@ -16,6 +25,10 @@ public class GameManager : MonoBehaviour
     public float StageLengthSeconds = 360f;
     public float OrderCutoffTime = 330f;
     public float CurrentStageTime = 0f;
+
+    public GameStage currentGameStage = GameStage.early;
+
+    public List<IngredientMax> IngredientsPerStage;
 
     private void Start()
     {
@@ -32,5 +45,10 @@ public class GameManager : MonoBehaviour
     public bool TakingNewOrders()
     {
         return CurrentStageTime < OrderCutoffTime;
+    }
+
+    public int MaxToppingsThisStage()
+    {
+        return IngredientsPerStage.Where(a => a.stage == currentGameStage).First().maxIngredients;
     }
 }
