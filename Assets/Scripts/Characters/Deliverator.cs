@@ -19,10 +19,13 @@ public class Deliverator : MonoBehaviour
     private enum MovementState { entering, waiting, deliverating, idle }
 
     MovementState currentState = MovementState.entering;
+    GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = FindObjectOfType<GameManager>();
+        if (gameManager == null) Debug.LogError("Game manager missing? What??");
         anim = GetComponent<Animator>();
         if (destinationSocket == null) Debug.LogError("Destination socket needs to be populated");
     }
@@ -57,10 +60,10 @@ public class Deliverator : MonoBehaviour
                 break;
 
             case MovementState.waiting:
-                var p = GetClosestCookedPizza();
-                if (p != null)
+                var deliverySocket = GetCookedPizzaWithOrder();
+                if (deliverySocket != null)
                 {
-                    var holdable = p.OccupiedBy.GetComponent<Holdable>();
+                    var holdable = deliverySocket.OccupiedBy.GetComponent<Holdable>();
                     if (holdable != null)
                     {
                         currentHolding = holdable;
@@ -97,14 +100,12 @@ public class Deliverator : MonoBehaviour
         }
     }
 
-    PlacementSocket GetClosestCookedPizza()
+    PlacementSocket GetCookedPizzaWithOrder()
     {
-        float dist = float.MaxValue;
-        PlacementSocket closestSocket = null;
-
         foreach (var ss in sourceSockets)
         {
             var isCookedPizza = false;
+            var isOrderForThisPizza = false;
 
             if (ss.OccupiedBy != null)
             {
@@ -115,19 +116,16 @@ public class Deliverator : MonoBehaviour
                 }
 
                 if (pizza.stage == Pizza.PizzaStage.baked) isCookedPizza = true;
+                var order = gameManager.orderManager.FindOpenOrder(pizza.GetToppings());
+                if (order != null) isOrderForThisPizza = true;
             }
 
-            if (isCookedPizza)
+            if (isCookedPizza && isOrderForThisPizza)
             {
-                var d = Vector2.Distance(transform.position, ss.transform.position);
-                if (d < dist)
-                {
-                    dist = d;
-                    closestSocket = ss;
-                }
+                return ss;
             }
         }
 
-        return closestSocket;
+        return null;
     }
 }

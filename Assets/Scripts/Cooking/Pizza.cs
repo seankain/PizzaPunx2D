@@ -38,6 +38,8 @@ public class Pizza : MonoBehaviour
 
     public PizzaStage stage = PizzaStage.dough;
 
+    GameManager gameManager;
+
     public int GetNumToppings()
     {
         return AddedIngredients.Count - 2;
@@ -48,43 +50,43 @@ public class Pizza : MonoBehaviour
         return AddedIngredients;
     }
 
-    protected PizzaType getPizzaType()
+    public static PizzaType getPizzaType(List<PizzaIngredient.PizzaInredientType> ingredients)
     {
         bool hasCheese = false;
         bool hasVeggies = false;
         bool hasMeat = false;
         bool hasSauce = false;
 
-        if (AddedIngredients.Contains(PizzaIngredient.PizzaInredientType.Broccoli)
-            || AddedIngredients.Contains(PizzaIngredient.PizzaInredientType.ChiliPepper)
-            || AddedIngredients.Contains(PizzaIngredient.PizzaInredientType.Mushroom)
-            || AddedIngredients.Contains(PizzaIngredient.PizzaInredientType.Onion)
-            || AddedIngredients.Contains(PizzaIngredient.PizzaInredientType.Pepper)
-            || AddedIngredients.Contains(PizzaIngredient.PizzaInredientType.Tomato))
+        if (ingredients.Contains(PizzaIngredient.PizzaInredientType.Broccoli)
+            || ingredients.Contains(PizzaIngredient.PizzaInredientType.ChiliPepper)
+            || ingredients.Contains(PizzaIngredient.PizzaInredientType.Mushroom)
+            || ingredients.Contains(PizzaIngredient.PizzaInredientType.Onion)
+            || ingredients.Contains(PizzaIngredient.PizzaInredientType.Pepper)
+            || ingredients.Contains(PizzaIngredient.PizzaInredientType.Tomato))
         {
             hasVeggies = true;
         }
 
-        if (AddedIngredients.Contains(PizzaIngredient.PizzaInredientType.Sauce))
+        if (ingredients.Contains(PizzaIngredient.PizzaInredientType.Sauce))
         {
             hasSauce = true;
         }
 
-        if (AddedIngredients.Contains(PizzaIngredient.PizzaInredientType.Cheese))
+        if (ingredients.Contains(PizzaIngredient.PizzaInredientType.Cheese))
         {
             hasCheese = true;
         }
 
-        if (AddedIngredients.Contains(PizzaIngredient.PizzaInredientType.Pepperoni)
-            || AddedIngredients.Contains(PizzaIngredient.PizzaInredientType.Sardine)
-            || AddedIngredients.Contains(PizzaIngredient.PizzaInredientType.Shrimp)
-            || AddedIngredients.Contains(PizzaIngredient.PizzaInredientType.SpecialMeat)
+        if (ingredients.Contains(PizzaIngredient.PizzaInredientType.Pepperoni)
+            || ingredients.Contains(PizzaIngredient.PizzaInredientType.Sardine)
+            || ingredients.Contains(PizzaIngredient.PizzaInredientType.Shrimp)
+            || ingredients.Contains(PizzaIngredient.PizzaInredientType.SpecialMeat)
             )
         {
             hasMeat = true;
         }
 
-        if (AddedIngredients.Count == 0) return PizzaType.dough;
+        if (ingredients.Count == 0) return PizzaType.dough;
         else
         {
             if (hasSauce == true)
@@ -139,7 +141,7 @@ public class Pizza : MonoBehaviour
 
     public void AddIngredient(PizzaIngredient.PizzaInredientType newIngredient)
     {
-        if (getPizzaType() != PizzaType.wrong)
+        if (getPizzaType(AddedIngredients) != PizzaType.wrong)
         {
             AddedIngredients.Add(newIngredient);
             SetToppinged();
@@ -148,76 +150,17 @@ public class Pizza : MonoBehaviour
 
     private void SetToppingSprite()
     {
-        switch (getPizzaType())
-        {
-            case PizzaType.dough:
-                spriteRenderer.sprite = RawDoughSprite;
-                break;
-
-            case PizzaType.sauced:
-                spriteRenderer.sprite = SaucedSprite;
-                break;
-
-            case PizzaType.cheese:
-                spriteRenderer.sprite = ToppedCheeseSprite;
-                break;
-
-            case PizzaType.veggie:
-                spriteRenderer.sprite = ToppedVeggieSprite;
-                break;
-
-            case PizzaType.meat:
-                spriteRenderer.sprite = ToppedPepperoniSprite;
-                break;
-
-            case PizzaType.combo:
-                spriteRenderer.sprite = ToppedComboSprite;
-                break;
-
-            case PizzaType.wrong:
-                spriteRenderer.sprite = ToppedWrongSprite;
-                break;
-        }
-        
+        spriteRenderer.sprite = gameManager.pizzaSpriteManager.GetPizzaSprite(AddedIngredients, false);
     }
 
     private void SetBakedSprite() {
-
-        switch (getPizzaType())
-        {
-            case PizzaType.dough:
-                spriteRenderer.sprite = BakedDoughSprite;
-                break;
-
-            case PizzaType.sauced:
-                spriteRenderer.sprite = BakedSauceSprite;
-                break;
-
-            case PizzaType.cheese:
-                spriteRenderer.sprite = BakedCheeseSprite;
-                break;
-
-            case PizzaType.veggie:
-                spriteRenderer.sprite = BakedVeggieSprite;
-                break;
-
-            case PizzaType.meat:
-                spriteRenderer.sprite = BakedPepperoniSprite;
-                break;
-
-            case PizzaType.combo:
-                spriteRenderer.sprite = BakedComboSprite;
-                break;
-
-            case PizzaType.wrong:
-                spriteRenderer.sprite = BakedWrongSprite;
-                break;
-        }
+        spriteRenderer.sprite = gameManager.pizzaSpriteManager.GetPizzaSprite(AddedIngredients, true);
     }
 
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = FindObjectOfType<GameManager>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 }

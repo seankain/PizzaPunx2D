@@ -5,10 +5,10 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using static GameManager;
 
 public class ShowReview : MonoBehaviour
 {
-    public enum GameStage { early, mid, late }
     public enum ReviewStatus { revealing, showing, closing, closed };
     public enum ReviewGrade { correct, incorrect, missed };
 
