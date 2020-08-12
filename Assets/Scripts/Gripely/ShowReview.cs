@@ -44,9 +44,10 @@ public class ShowReview : MonoBehaviour
             case ReviewStatus.revealing:
                 break;
 
-            // Player missed it. Close up
+            // Thank
             case ReviewStatus.showing:
                 CloseReview(currentReview.isGoodReview, true);
+                if (OnThank != null) OnThank.Invoke();
                 break;
         }
     }
@@ -67,9 +68,10 @@ public class ShowReview : MonoBehaviour
             case ReviewStatus.revealing:
                 break;
 
-            // Player missed it. Close up
+            // Placate
             case ReviewStatus.showing:
                 CloseReview(currentReview.isGoodReview, false);
+                if (OnPlacate != null) OnPlacate.Invoke();
                 break;
         }
     }
