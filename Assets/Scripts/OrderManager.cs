@@ -20,6 +20,9 @@ public class OrderManager : MonoBehaviour
     public int maxOpenOrders = 4;
     public int maxToppings = 4; // does not include sauce and cheese
 
+    public GameObject UserFeedbackPrefab;
+    public float DelayBetweenFeedbackItems = 0.2f;
+
     float timeUntilNextOrder = 0f;
 
     public UnityIntEvent OnOrderComplete;
@@ -120,29 +123,58 @@ public class OrderManager : MonoBehaviour
 
     public void PizzaReviewed(int orderId, bool wasGoodReview, ReviewGrade grade)
     {
+        var feedbackItems = new Dictionary<string, Color>();
         var money = basePizzaFee;
 
         switch (grade)
         {
             case ReviewGrade.correct:
                 money *= rewardForRightButton;
+                feedbackItems.Add("Correct Reponse", Color.green);
                 break;
 
             case ReviewGrade.incorrect:
                 money *= penaltyForWrongButton;
+                feedbackItems.Add("Incorrect Reponse", Color.yellow);
                 break;
 
             case ReviewGrade.missed:
                 money *= penaltyForMissedReview;
+                feedbackItems.Add("Missed Response!", Color.red);
                 break;
         }
-        if (wasGoodReview == true) money *= rewardForGoodReview;
+
+        // A small bonus for a good review
+        if (wasGoodReview == true)
+        {
+            money *= rewardForGoodReview;
+        }
 
         var o = FindOrderById(orderId);
         if (o != null)
         {
+            var numToppings = o.ingredients.Count() - 2; // sauce and cheese by default
+            var toppingsFee = numToppings * perToppingFee;
+            if (numToppings > 0) feedbackItems.Add("Toppings! $" + toppingsFee, Color.cyan);
+            money += toppingsFee;
+
             o.moneyEarned = (int)money;
             gameManager.moneyDisplay.addToFunds(o.moneyEarned);
+            StartCoroutine(ProvideFeedbackCo(feedbackItems));
+        }
+
+    }
+
+    IEnumerator ProvideFeedbackCo(Dictionary<string, Color> FeedbackItems)
+    {
+        foreach (var kvp in FeedbackItems)
+        {
+            var thing = Instantiate(UserFeedbackPrefab);
+            var ufs = thing.GetComponent<UserFeedback>();
+            if (ufs != null) {
+                ufs.SetText(kvp.Key, kvp.Value);
+            }
+            yield return new WaitForSeconds(DelayBetweenFeedbackItems);
         }
     }
 

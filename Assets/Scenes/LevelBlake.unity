@@ -1659,6 +1659,9 @@ MonoBehaviour:
   orderRandomness: 2
   maxOpenOrders: 4
   maxToppings: 4
+  UserFeedbackPrefab: {fileID: 8265588604487125977, guid: 424e3f5662915c14e949dd98c19d61e1,
+    type: 3}
+  DelayBetweenFeedbackItems: 0.2
   OnOrderComplete:
     m_PersistentCalls:
       m_Calls:
