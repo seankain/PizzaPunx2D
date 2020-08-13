@@ -1075,7 +1075,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65b4ee51fb3ec64199e774aeeab675f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orderAdjust: 3
+  orderAdjust: 2
 --- !u!1 &201831317
 GameObject:
   m_ObjectHideFlags: 0
@@ -1340,7 +1340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65b4ee51fb3ec64199e774aeeab675f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orderAdjust: 3
+  orderAdjust: 2
 --- !u!1 &244937178
 GameObject:
   m_ObjectHideFlags: 0
@@ -2000,7 +2000,7 @@ PrefabInstance:
     - target: {fileID: 6705331304616826199, guid: 4d9a60984e8fbe24294e6eab3ca28767,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 6705331304616826199, guid: 4d9a60984e8fbe24294e6eab3ca28767,
         type: 3}
@@ -20592,7 +20592,7 @@ PrefabInstance:
     - target: {fileID: 6705331304616826199, guid: 4d9a60984e8fbe24294e6eab3ca28767,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 6705331304616826199, guid: 4d9a60984e8fbe24294e6eab3ca28767,
         type: 3}
@@ -32647,7 +32647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d65b4ee51fb3ec64199e774aeeab675f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orderAdjust: 3
+  orderAdjust: 2
 --- !u!1 &1564615430
 GameObject:
   m_ObjectHideFlags: 0
@@ -34454,7 +34454,7 @@ PrefabInstance:
     - target: {fileID: 6705331304616826199, guid: 4d9a60984e8fbe24294e6eab3ca28767,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 6705331304616826199, guid: 4d9a60984e8fbe24294e6eab3ca28767,
         type: 3}
