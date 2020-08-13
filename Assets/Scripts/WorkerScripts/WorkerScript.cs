@@ -10,6 +10,8 @@ public class WorkerScript : MonoBehaviour
     public PlacementSocket IngredientSocket;
     public int ToStage;
 
+    bool isCurrentlyWorking = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,7 @@ public class WorkerScript : MonoBehaviour
 
     public void Activate()
     {
-        if (PizzaSocket.OccupiedBy != null && IngredientSocket.OccupiedBy != null)
+        if (PizzaSocket.OccupiedBy != null && IngredientSocket.OccupiedBy != null && isCurrentlyWorking == false)
         {
             var ingredient = IngredientSocket.OccupiedBy.GetComponentInChildren<PizzaIngredient>();
 
@@ -33,11 +35,14 @@ public class WorkerScript : MonoBehaviour
         var ps = PizzaSocket.OccupiedBy.GetComponentInChildren<Pizza>();
         if (ps == null) Debug.LogError("Pizza script missing?");
         var i = ps.GetComponent<Interactable>();
+        isCurrentlyWorking = true;
         i.isLocked = true;
 
         yield return new WaitForSeconds(wait);
 
         ps.AddIngredient(ingredient);
         i.isLocked = false;
+        isCurrentlyWorking = false;
+        Activate(); // Try to activate again, in case an ingredient was placed while working
     }
 }
