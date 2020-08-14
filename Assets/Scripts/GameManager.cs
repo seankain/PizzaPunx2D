@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     public enum GameStage { early, mid, late }
 
     public OrderManager orderManager;
-    public MoneyDisplay moneyDisplay;
+    //public MoneyDisplay moneyDisplay;
     public PizzaSpriteManager pizzaSpriteManager;
     public IngredientSpriteManager ingredientSpriteManager;
 
@@ -31,12 +31,14 @@ public class GameManager : MonoBehaviour
 
     public List<IngredientMax> IngredientsPerStage;
 
+    public UnityIntEvent OnMoneyChanged;
     public UnityEvent OnLevelDone;
+
+    float CurrentMoney;
 
     private void Start()
     {
         if (orderManager == null) Debug.LogError("Game manager has no order manager!");
-        if (moneyDisplay == null) Debug.LogError("Game mangaer has no money display!");
         if (pizzaSpriteManager == null) Debug.LogError("Game manager has no pizza sprite manager!");
     }
 
@@ -53,6 +55,12 @@ public class GameManager : MonoBehaviour
     public int MaxToppingsThisStage()
     {
         return IngredientsPerStage.Where(a => a.stage == currentGameStage).First().maxIngredients;
+    }
+
+    public void AddMoney(int newMoney)
+    {
+        CurrentMoney += newMoney;
+        if (OnMoneyChanged != null) OnMoneyChanged.Invoke((int)CurrentMoney);
     }
 
     public void CheckIfLevelDone()

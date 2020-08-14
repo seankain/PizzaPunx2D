@@ -9,9 +9,9 @@ public class MoneyDisplay : MonoBehaviour
     int currentlyDisplayedAmount = 0;
     int targetAmount = 0;
 
-    public void addToFunds(int newAmount)
+    public void SetMoneyTarget(int newAmount)
     {
-        targetAmount += newAmount;
+        targetAmount = newAmount;
     }
 
     // Update is called once per frame

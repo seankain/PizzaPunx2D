@@ -159,7 +159,7 @@ public class OrderManager : MonoBehaviour
             money += toppingsFee;
 
             o.moneyEarned = (int)money;
-            gameManager.moneyDisplay.addToFunds(o.moneyEarned);
+            gameManager.AddMoney(o.moneyEarned);
             StartCoroutine(ProvideFeedbackCo(feedbackItems));
         }
 
@@ -188,6 +188,6 @@ public class OrderManager : MonoBehaviour
 
     public void TrashedPizza()
     {
-        gameManager.moneyDisplay.addToFunds(PizzaTrashPenalty);
+        gameManager.AddMoney(PizzaTrashPenalty);
     }
 }
