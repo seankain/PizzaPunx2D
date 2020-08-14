@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MoneyDisplay : MonoBehaviour
 {
     public Text targetTextbox;
+    public string prefix = "";
     int currentlyDisplayedAmount = 0;
     int targetAmount = 0;
 
@@ -26,7 +27,7 @@ public class MoneyDisplay : MonoBehaviour
         if (currentlyDisplayedAmount > targetAmount)
         {
             currentlyDisplayedAmount--;
-            targetTextbox.text = $"${currentlyDisplayedAmount}";
+            targetTextbox.text = $"{prefix}${currentlyDisplayedAmount}";
         }
     }
 }
