@@ -7,6 +7,7 @@ public class MoneyDisplay : MonoBehaviour
 {
     public Text targetTextbox;
     public string prefix = "";
+    public int changeSpeed = 1;
     int currentlyDisplayedAmount = 0;
     int targetAmount = 0;
 
@@ -18,15 +19,18 @@ public class MoneyDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Adjust the speed based on the amount things need to change
+        var delta = Mathf.Min(changeSpeed, Mathf.Abs(targetAmount - currentlyDisplayedAmount));
+
         if (currentlyDisplayedAmount < targetAmount)
         {
-            currentlyDisplayedAmount++;
+            currentlyDisplayedAmount += delta;
             targetTextbox.text = $"${currentlyDisplayedAmount}";
         }
 
         if (currentlyDisplayedAmount > targetAmount)
         {
-            currentlyDisplayedAmount--;
+            currentlyDisplayedAmount -= delta;
             targetTextbox.text = $"{prefix}${currentlyDisplayedAmount}";
         }
     }

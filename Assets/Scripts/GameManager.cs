@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 public class IngredientMax
@@ -13,8 +14,9 @@ public class IngredientMax
 
 public class GameManager : MonoBehaviour
 {
-    public enum GameStage { early, mid, late }
+    public enum GameStage { early, mid, late, end }
 
+    public GameObject GameStatePrefab;
     public OrderManager orderManager;
     //public MoneyDisplay moneyDisplay;
     public PizzaSpriteManager pizzaSpriteManager;
@@ -36,10 +38,49 @@ public class GameManager : MonoBehaviour
 
     float CurrentMoney;
 
+    GameState currentGameState;
+
     private void Start()
     {
         if (orderManager == null) Debug.LogError("Game manager has no order manager!");
         if (pizzaSpriteManager == null) Debug.LogError("Game manager has no pizza sprite manager!");
+
+        currentGameState = FindObjectOfType<GameState>();
+        if (currentGameState == null)
+        {
+            Debug.Log("No current state defined, defaulting");
+            var gso = Instantiate(GameStatePrefab);
+            currentGameState = gso.GetComponent<GameState>();
+        }
+
+        if (currentGameState == null) Debug.LogError("Still null? Not sure what to do");
+        else
+        {
+            CurrentMoney = currentGameState.Money;
+            currentGameStage = currentGameState.CurrentStage;
+
+            AddMoney(0); // Force money display to change
+        }
+    }
+
+    public void GoToNextScene()
+    {
+        currentGameState.Money = (int)CurrentMoney;
+        switch (currentGameStage)
+        {
+            case GameStage.early:
+                currentGameState.CurrentStage = GameStage.mid;
+                break;
+
+            case GameStage.mid:
+                currentGameState.CurrentStage = GameStage.late;
+                break;
+
+            case GameStage.late:
+                currentGameState.CurrentStage = GameStage.end;
+                break;
+        }
+        SceneManager.LoadScene(2);
     }
 
     private void Update()

@@ -10,12 +10,6 @@ public class MenuInput : MonoBehaviour
     public AudioSource music;
     private bool transitioning = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -27,7 +21,11 @@ public class MenuInput : MonoBehaviour
 
             //SceneManager.SetActiveScene(Level);
         }
+
         //Wait for selection sound to finish playing
-        if(transitioning && !selectionSound.isPlaying) { SceneManager.LoadScene(1); }
+        if(transitioning && !selectionSound.isPlaying) { 
+
+            SceneManager.LoadScene(2);
+        }
     }
 }

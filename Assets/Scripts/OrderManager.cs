@@ -50,15 +50,31 @@ public class OrderManager : MonoBehaviour
 
     public PizzaIngredient.PizzaInredientType RandomTopping()
     {
-        var values = System.Enum.GetValues(typeof(PizzaIngredient.PizzaInredientType));
-        var topping = (PizzaIngredient.PizzaInredientType)values.GetValue(Random.Range(0, values.Length));
+        PizzaIngredient.PizzaInredientType topping = AnyRandomTopping();
 
-        while (topping == PizzaIngredient.PizzaInredientType.Cheese || topping == PizzaIngredient.PizzaInredientType.Sauce)
+        // No special meat early in the game
+        if (gameManager.currentGameStage == GameManager.GameStage.early)
         {
-            topping = (PizzaIngredient.PizzaInredientType)values.GetValue(Random.Range(0, values.Length));
+            while (topping == PizzaIngredient.PizzaInredientType.Cheese || topping == PizzaIngredient.PizzaInredientType.Sauce || topping == PizzaIngredient.PizzaInredientType.SpecialMeat)
+            {
+                topping = AnyRandomTopping();
+            }
+        }
+        else
+        {
+            while (topping == PizzaIngredient.PizzaInredientType.Cheese || topping == PizzaIngredient.PizzaInredientType.Sauce)
+            {
+                topping = AnyRandomTopping();
+            }
         }
 
         return topping;
+    }
+
+    private static PizzaIngredient.PizzaInredientType AnyRandomTopping()
+    {
+        var values = System.Enum.GetValues(typeof(PizzaIngredient.PizzaInredientType));
+        return (PizzaIngredient.PizzaInredientType)values.GetValue(Random.Range(0, values.Length));
     }
 
     public List<PizzaIngredient.PizzaInredientType> AllNeededIngredients()
