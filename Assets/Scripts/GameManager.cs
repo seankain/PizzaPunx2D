@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     public UnityIntEvent OnMoneyChanged;
     public UnityEvent OnLevelDone;
 
-    float CurrentMoney;
+    public float CurrentMoney;
 
     GameState currentGameState;
 
@@ -60,6 +60,42 @@ public class GameManager : MonoBehaviour
             currentGameStage = currentGameState.CurrentStage;
 
             AddMoney(0); // Force money display to change
+        }
+    }
+
+    public void PurchaseSwarm(int amount)
+    {
+        if (amount < CurrentMoney && currentGameState.HasSwarm == false)
+        {
+            AddMoney(-amount);
+            currentGameState.HasSwarm = true;
+        }
+    }
+
+    public void PurchaseDoughMachine(int amount)
+    {
+        if (amount < CurrentMoney && currentGameState.HasDoughMachine == false)
+        {
+            AddMoney(-amount);
+            currentGameState.HasDoughMachine = true;
+        }
+    }
+
+    public void PurchaseSupplyBot(int amount)
+    {
+        if (amount < CurrentMoney && currentGameState.HasSupplyBot == false)
+        {
+            AddMoney(-amount);
+            currentGameState.HasSupplyBot = true;
+        }
+    }
+
+    public void PurchaseTopper(int amount)
+    {
+        if (amount < CurrentMoney && currentGameState.NumToppersReplaced < 3)
+        {
+            AddMoney(-amount);
+            currentGameState.NumToppersReplaced++;
         }
     }
 
