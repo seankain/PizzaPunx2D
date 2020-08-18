@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using static PizzaIngredient;
 
-[Serializable]
+[System.Serializable]
 public class IngredientTouple
 {
     public PizzaInredientType key;
@@ -18,12 +17,15 @@ public class IngredientSpawner : MonoBehaviour
     public List<IngredientTouple> prefabDict;
 
 
+    GameManager gameManager;
     PlacementSocket relatedSocket;
     float elapsed = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = FindObjectOfType<GameManager>();
+
         relatedSocket = GetComponent<PlacementSocket>();
         if (relatedSocket == null)
         {
@@ -68,7 +70,23 @@ public class IngredientSpawner : MonoBehaviour
     public PizzaInredientType? PickThingToSpawn()
     {
         var allThings = FindObjectsOfType<PizzaIngredient>();
+        var allNeededIngredients = gameManager.orderManager.AllNeededIngredients();
+
+        foreach (var thing in allThings)
+        {
+            if (allNeededIngredients.Contains(thing.Ingredient))
+            {
+                allNeededIngredients.Remove(thing.Ingredient);
+            }
+        }
+
+        if (allNeededIngredients.Count > 0)
+        {
+            return allNeededIngredients[Random.Range(0, allNeededIngredients.Count)];
+        }
+        return null;
         
+        /*
         var sauces = allThings.Where(a => a.Ingredient == PizzaInredientType.Sauce);
 
         var numSauce = allThings.Where(a => a.Ingredient == PizzaInredientType.Sauce).Count();
@@ -76,7 +94,6 @@ public class IngredientSpawner : MonoBehaviour
 
         var numCheese = allThings.Where(a => a.Ingredient == PizzaInredientType.Cheese).Count();
         if (numCheese == 0) return PizzaInredientType.Cheese;
-
-        return null;
+        */
     }
 }

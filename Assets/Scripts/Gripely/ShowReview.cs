@@ -5,12 +5,15 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using static GameManager;
 
 public class ShowReview : MonoBehaviour
 {
-    public enum GameStage { early, mid, late }
     public enum ReviewStatus { revealing, showing, closing, closed };
     public enum ReviewGrade { correct, incorrect, missed };
+
+    public UnityEvent OnThank;
+    public UnityEvent OnPlacate;
 
     public string InitialText;
 
@@ -41,9 +44,10 @@ public class ShowReview : MonoBehaviour
             case ReviewStatus.revealing:
                 break;
 
-            // Player missed it. Close up
+            // Thank
             case ReviewStatus.showing:
                 CloseReview(currentReview.isGoodReview, true);
+                if (OnThank != null) OnThank.Invoke();
                 break;
         }
     }
@@ -64,9 +68,10 @@ public class ShowReview : MonoBehaviour
             case ReviewStatus.revealing:
                 break;
 
-            // Player missed it. Close up
+            // Placate
             case ReviewStatus.showing:
                 CloseReview(currentReview.isGoodReview, false);
+                if (OnPlacate != null) OnPlacate.Invoke();
                 break;
         }
     }
@@ -211,6 +216,18 @@ public class ShowReview : MonoBehaviour
         if (currentStatus == ReviewStatus.closed && nextReview != null )
         {
             AnimateOpening();
+        }
+
+        if (Input.GetKey(KeyCode.Z))
+        {
+            Thank();
+        }
+        else
+        {
+            if (Input.GetKey(KeyCode.X))
+            {
+                Placate();
+            }
         }
     }
 }

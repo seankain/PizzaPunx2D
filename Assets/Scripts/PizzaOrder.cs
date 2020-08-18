@@ -27,4 +27,9 @@ public class PizzaOrder
 
         return true;
     }
+
+    public void AddWaitTime(float f)
+    {
+        waitTime += f;
+    }
 }
